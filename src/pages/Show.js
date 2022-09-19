@@ -1,4 +1,4 @@
-import React from 'react'
+// delete and update page 
 
 export const Show = () => {
   return (
