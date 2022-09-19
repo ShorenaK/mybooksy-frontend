@@ -5,3 +5,5 @@ export const Show = () => {
     <div>Show</div>
   )
 }
+
+export default Show
