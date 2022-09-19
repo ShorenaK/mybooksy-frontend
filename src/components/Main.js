@@ -4,7 +4,6 @@ import Show from "../pages/Show";
 
 function Main(props) {
  
- 
     return ( 
        <>
        <Outlet/>
