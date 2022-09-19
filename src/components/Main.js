@@ -1,5 +1,17 @@
+import { Routes, Route, Outlet } from "react-router-dom"
+
 function Main(props) {
-    return <h1>Main</h1>;
+  const URL = "https://mybooksy-project.herokuapp.com/"
+ 
+    return ( 
+       <>
+       <Outlet/>
+       <Routes>
+      
+      </Routes>
+      <Footer />
+     </> 
+     ) 
   }
   
   export default Main;
