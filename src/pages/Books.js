@@ -2,7 +2,7 @@
 
  import { useState, useEffect } from "react";
  import {Link} from 'react-router-dom' 
-
+ import BookForm from './components/BookForm'
 
 export const Books = (props) => {
     const [books, setBooks] = useState([])
@@ -36,6 +36,7 @@ const loaded = ()=>{
            <p>{book.publishDate}</p>
             <a href={book.link}>Links</a>
            <p>{book.likes}</p>
+           <div> <BookForm /> </div>
         </div>
        )
   })
