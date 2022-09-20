@@ -1,6 +1,7 @@
 // Delete and update page 
 import { useState, useEffect } from "react"
 import { useParams , Link, useNavigate} from "react-router-dom"
+
 export const Show = ({indx}) => {
   const [book, setBook ]= useState(null)
   const { id } = useParams()
@@ -46,17 +47,18 @@ useEffect(()=>{
       <h1>{book.title}</h1>
        <img src={book.image}  alt="book"/>
        <h2>{book.author}</h2>
-       <h3>{book.genre}</h3>
+        <h3>{book.genre}</h3>
         <p>{book.pages}</p>
         <p>{book.description}</p>
         <p>{book.publishDate}</p>
         <a href={book.link}>Links</a>
         <p>{book.likes}</p>
         <p>{book.__v}</p>
-        <div className="delete">
-        onClick={removeBook}
-        Remove Book
-           </div>
+    <div> 
+        <button className="delete" onClick={removeBook}>
+									Remove Book
+				</button>
+    </div>
 </div>
 )
 
