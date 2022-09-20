@@ -1,7 +1,7 @@
 // Delete and update page 
 import { useState, useEffect } from "react"
 import { useParams , Link, useNavigate} from "react-router-dom"
-
+import Reviews from "../pages/Reviews";
 export const Show = () => {
   const [book, setBook ]= useState(null)
   const params = useParams()
@@ -64,8 +64,10 @@ const loading = () => {
 }
 
   return (
-    <div className="book-list">{book? loaded() : loading()}
-   {console.log(book)} 
+    <div>
+      <div className="book-list">{book? loaded() : loading()}
+      </div>
+      <div><Reviews /> </div>
     </div>
   )
 }
