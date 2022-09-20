@@ -30,7 +30,7 @@ const loaded = ()=>{
            <p>{book.pages}</p>
            <p>{book.description}</p>
            <p>{book.publishDate}</p>
-            <p>{book.link}</p>
+            <a href={book.link}>Links</a>
            <p>{book.likes}</p>
            <p>{book.__v}</p>
         </div>
