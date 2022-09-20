@@ -2,17 +2,12 @@
 import { useState, useEffect } from "react"
 import { useParams , Link, useNavigate} from "react-router-dom"
 
-export const Show = ({indx}) => {
+export const Show = () => {
   const [book, setBook ]= useState(null)
-  const { id } = useParams()
+  const params = useParams()
+  const bookId = `${params.bookId}/`
   const navigate = useNavigate()
-  // const URL = `https://mybooksy-project.herokuapp.com/books/${id}`
-  // const URL = `http://localhost:4000/books/${id}`
-  // const URL = `https://mybooksy-project.herokuapp.com/books${id}${indx}`
-
-  const URL = `https://mybooksy-project.herokuapp.com/books?id=${id}`
-  // const BASE_URL = process.env.REACT_APP_URL 
-  // const URL = `${BASE_URL}${id}`
+  const URL = `https://mybooksy-project.herokuapp.com/books/${bookId}`
 
   const getBook = async ()=>{
     try {
@@ -43,6 +38,7 @@ useEffect(()=>{
 }, [])
 
   const loaded = () => (
+   
   <div className="book">
       <h1>Show Page</h1>
       <h1>{book.title}</h1>
@@ -68,7 +64,9 @@ const loading = () => {
 }
 
   return (
-    <div className="book-list">{book? loaded() : loading()}</div>
+    <div className="book-list">{book? loaded() : loading()}
+   {console.log(book)} 
+    </div>
   )
 }
 
