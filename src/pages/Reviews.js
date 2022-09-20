@@ -1,5 +1,6 @@
 import {useNavigate, useParams} from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom'
 
 function Reviews(){
 
@@ -18,6 +19,7 @@ function Reviews(){
     return (
       <div>
         <div>Reviews:</div>
+        <Link to={`/reviews/${bookId}add/`}><p>Add Review</p></Link>
         {variable.map((review, idx) => {
           if (review.recommend == true) {
           return (
@@ -32,6 +34,7 @@ function Reviews(){
               }}>Remove Review</button>
             </div>
           )} else {
+            return(
             <div className='review-wrapper'>
               <p>{review.comment}</p>
               <p>I do not Recommend</p>
@@ -42,7 +45,7 @@ function Reviews(){
                 window.location.reload(false);
               }}>Remove Review</button>
             </div>
-          }
+        )}
         })}
       </div>
     )
