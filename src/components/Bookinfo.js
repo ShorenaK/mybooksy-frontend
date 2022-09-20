@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useParams, useNavigate} from "react-router-dom"
+import {Link} from 'react-router-dom' 
 
 
 export default function Bookinfo() {
@@ -51,6 +52,7 @@ useEffect(()=>{
         <a href={book.link}>Links</a>
         <p>Likes: {book.likes}</p>
     <div> 
+        <Link to={`/books/${bookId}edit/`}><button>Edit book</button></Link>
         <button className="delete" onClick={removeBook}>
 									Remove Book
 				</button>
