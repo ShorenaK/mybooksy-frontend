@@ -2,7 +2,6 @@
 
  import { useState, useEffect } from "react";
  import {Link} from 'react-router-dom' 
- import BookForm from '../components/BookForm'
 
 export const Books = (props) => {
     const [books, setBooks] = useState([])
@@ -22,7 +21,10 @@ export const Books = (props) => {
  }, [])
 
 const loaded = ()=>{
-  return books?.map((book)=>{
+  return (
+    <>
+    <Link to={`/books/add/`}><p>Add book</p></Link>
+  {books?.map((book)=>{
        return (
          <div key={book._id} className="book-card">
           <h1>{book.title}</h1>
@@ -36,11 +38,10 @@ const loaded = ()=>{
            <p>Publication Date: {book.publishDate}</p>
             <a href={book.link}>Links</a>
            <p>Likes: {book.likes}</p>
-           <div> <BookForm /> </div>
+          
         </div>
-       )
-  })
-}
+        )})
+        } </> )}
 const loading = () => (
   <section className="book-list">
     <h1>
