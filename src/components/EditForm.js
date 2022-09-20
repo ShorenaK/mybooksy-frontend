@@ -42,7 +42,7 @@ function EditForm(props) {
             const response = await fetch(URL, options)
             const responseData = await response.json()
             console.log(responseData)
-            navigate(`/books/`)
+            navigate(`/books/${bookId}`)
 
         } catch (error) {
             console.log(error)
@@ -60,7 +60,9 @@ function EditForm(props) {
 
     return (
         <>
-            <h1>Book Form</h1>
+            {editForm ?
+            <>
+            <h1>Book Edit Form</h1>
             <form onSubmit={handleSubmit}>
                 <label>
                     Title: 
@@ -96,6 +98,7 @@ function EditForm(props) {
                 </label>
                 <input type="Submit" value="Submit Changes" />
             </form>
+           </> : null}
         </>
     )
 }
