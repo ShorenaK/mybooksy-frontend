@@ -9,7 +9,8 @@ export const Show = ({indx}) => {
   // const URL = `https://mybooksy-project.herokuapp.com/books/${id}`
   // const URL = `http://localhost:4000/books/${id}`
   // const URL = `https://mybooksy-project.herokuapp.com/books${id}${indx}`
-  // const URL = `https://mybooksy-project.herokuapp.com/books?id=${id}`
+
+  const URL = `https://mybooksy-project.herokuapp.com/books?id=${id}`
   // const BASE_URL = process.env.REACT_APP_URL 
   // const URL = `${BASE_URL}${id}`
 
@@ -53,7 +54,6 @@ useEffect(()=>{
         <p>{book.publishDate}</p>
         <a href={book.link}>Links</a>
         <p>{book.likes}</p>
-        <p>{book.__v}</p>
     <div> 
         <button className="delete" onClick={removeBook}>
 									Remove Book

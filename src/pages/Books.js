@@ -36,7 +36,6 @@ const loaded = ()=>{
            <p>{book.publishDate}</p>
             <a href={book.link}>Links</a>
            <p>{book.likes}</p>
-           <p>{book.__v}</p>
           <Show indx={book._id}/>
         </div>
        )
