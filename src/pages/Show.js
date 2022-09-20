@@ -1,15 +1,17 @@
 // Delete and update page 
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams , Link, useNavigate} from "react-router-dom"
 export const Show = ({indx}) => {
   const [book, setBook ]= useState(null)
   const { id } = useParams()
+  const navigate = useNavigate()
   // const URL = `https://mybooksy-project.herokuapp.com/books/${id}`
   // const URL = `http://localhost:4000/books/${id}`
   // const URL = `https://mybooksy-project.herokuapp.com/books${id}${indx}`
   // const URL = `https://mybooksy-project.herokuapp.com/books?id=${id}`
-  const BASE_URL = process.env.REACT_APP_URL 
-  const URL = `${BASE_URL}${id}`
+  // const BASE_URL = process.env.REACT_APP_URL 
+  // const URL = `${BASE_URL}${id}`
+
   const getBook = async ()=>{
     try {
       const response = await fetch(URL)
@@ -21,6 +23,19 @@ export const Show = ({indx}) => {
   }
 console.log(`current book ${JSON.stringify(book)}`)
 
+const removeBook = async () => {
+  try {
+
+      const options = { method: 'DELETE' }
+      const response = await fetch(URL, options)
+      const deletedBook = await response.json()
+       console.log(deletedBook)
+      navigate('/')
+  } catch (err) {
+      console.log(err)
+      navigate(URL)
+  }
+}
 useEffect(()=>{
   getBook()
 }, [])
@@ -38,6 +53,10 @@ useEffect(()=>{
         <a href={book.link}>Links</a>
         <p>{book.likes}</p>
         <p>{book.__v}</p>
+        <div className="delete">
+        onClick={removeBook}
+        Remove Book
+           </div>
 </div>
 )
 
