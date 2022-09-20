@@ -22,7 +22,7 @@ export const Show = ({indx}) => {
     }
   }
 console.log(`current book ${JSON.stringify(book)}`)
-
+// Delete 
 const removeBook = async () => {
   try {
 
