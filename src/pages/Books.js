@@ -1,7 +1,7 @@
 // This page will fatch the Books data 
 
  import { useState, useEffect } from "react";
-//  import {Link} from 'react-router-dom' 
+ import {Link} from 'react-router-dom' 
 
 export const Books = (props) => {
     const [books, setBooks] = useState([])
@@ -22,17 +22,20 @@ export const Books = (props) => {
 const loaded = ()=>{
   return books?.map((book)=>{
        return (
-        <div key={book._id}>
-          <h2>{book.title}</h2>
+         <div key={book._id} className="book-card">
+          <h1>{book.title}</h1>
+          <Link to={`/books/${book._id}`}> 
           <img src={book.image}  alt="book"/>
-           <h3>{book.author}</h3>
-           <h4>{book.genre}</h4>
+          </Link>
+           <h2>{book.author}</h2>
+           <h3>{book.genre}</h3>
            <p>{book.pages}</p>
            <p>{book.description}</p>
            <p>{book.publishDate}</p>
             <a href={book.link}>Links</a>
            <p>{book.likes}</p>
            <p>{book.__v}</p>
+        
         </div>
        )
   })
