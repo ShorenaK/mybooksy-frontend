@@ -2,10 +2,11 @@
 
  import { useState, useEffect } from "react";
  import {Link} from 'react-router-dom' 
- import Show from './pages/Show'
+ import Show from './Show'
 
 export const Books = (props) => {
     const [books, setBooks] = useState([])
+   
     const URL = "https://mybooksy-project.herokuapp.com/books"  
     const getBooks = async () =>{
         try{
@@ -36,7 +37,7 @@ const loaded = ()=>{
             <a href={book.link}>Links</a>
            <p>{book.likes}</p>
            <p>{book.__v}</p>
-          <Show url={book._id}/>
+          <Show indx={book._id}/>
         </div>
        )
   })

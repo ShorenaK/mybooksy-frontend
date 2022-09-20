@@ -1,17 +1,15 @@
 // Delete and update page 
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-
-export const Show = ({url}) => {
+export const Show = ({indx}) => {
   const [book, setBook ]= useState(null)
-  const { url } = useParams()
-  // const { id } = useParams()
+  const { id } = useParams()
+  // const URL = `https://mybooksy-project.herokuapp.com/books/${id}`
   // const URL = `http://localhost:4000/books/${id}`
-  const URL = `https://mybooksy-project.herokuapp.com/books${id}`
-
+  // const URL = `https://mybooksy-project.herokuapp.com/books${id}${indx}`
   // const URL = `https://mybooksy-project.herokuapp.com/books?id=${id}`
-
-
+  const BASE_URL = process.env.REACT_APP_URL 
+  const URL = `${BASE_URL}${id}`
   const getBook = async ()=>{
     try {
       const response = await fetch(URL)
