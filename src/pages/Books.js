@@ -2,7 +2,7 @@
 
  import { useState, useEffect } from "react";
  import {Link} from 'react-router-dom' 
- import Show from './Show'
+
 
 export const Books = (props) => {
     const [books, setBooks] = useState([])
@@ -36,7 +36,6 @@ const loaded = ()=>{
            <p>{book.publishDate}</p>
             <a href={book.link}>Links</a>
            <p>{book.likes}</p>
-          <Show indx={book._id}/>
         </div>
        )
   })
