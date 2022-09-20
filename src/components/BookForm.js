@@ -8,7 +8,7 @@ const getBooks = async (fn) => {
         const allBooks = await response.json();
         fn(allBooks)
     } catch (error){
-        console.log(err)
+        console.log(error)
     }
 }
 
@@ -27,6 +27,33 @@ function BookForm(props) {
 
     const [bookForm, setBookForm] = useState(initForm);
 
+
+
+    const handleSubmit = async (e) => {
+        try {
+            const newBook = { ...bookForm }
+            const output = JSON.stringify(newBook)
+            const options = {
+                method: "POST",
+                headers: {
+                    "Content-Type" : "application/json"
+                },
+                body: output
+            }
+            const URL = BASE_URL + "books"
+            const response = await fetch(URL, options)
+            const responseData = await response.json()
+            setBookForm(initForm)
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    const handleChange = (e) => {
+        const data = { ...bookForm, [e.target.name]: e.target.value }
+        setBookForm(data)
+    }
 
     return (
         <>
@@ -64,6 +91,7 @@ function BookForm(props) {
                     Link to Purchase: 
                     <input type="text" required name="link" placeholder="http://..." onChange={handleChange} value={bookForm.link} />
                 </label>
+                <input type="Submit" value="Add Book" />
             </form>
         </>
     )
