@@ -1,5 +1,5 @@
-// delete and update page 
-
+// Delete and update page 
+const { id } = useParams()
 export const Show = () => {
   return (
     <div>Show</div>
