@@ -40,16 +40,16 @@ useEffect(()=>{
   const loaded = () => (
    
   <div className="book">
-      <h1>Show Page</h1>
+      <h1></h1>
       <h1>{book.title}</h1>
        <img src={book.image}  alt="book"/>
-       <h2>{book.author}</h2>
-        <h3>{book.genre}</h3>
-        <p>{book.pages}</p>
+       <h2>Author: {book.author}</h2>
+        <h3>Genre: {book.genre}</h3>
+        <p>Page: {book.pages}</p>
         <p>{book.description}</p>
-        <p>{book.publishDate}</p>
+        <p>Publication Date: {book.publishDate}</p>
         <a href={book.link}>Links</a>
-        <p>{book.likes}</p>
+        <p>Likes: {book.likes}</p>
     <div> 
         <button className="delete" onClick={removeBook}>
 									Remove Book
