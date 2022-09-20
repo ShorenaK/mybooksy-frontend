@@ -15,18 +15,6 @@ function Reviews(){
           
         })
     })
-    // const removeReview = async () => {
-    //   try {
-    //     const options = {method: 'DELETE'}
-    //     // const reviewId = variable._id
-    //     console.log(variable)
-    //     const response = await fetch(`https://mybooksy-project.herokuapp.com/reviews/${bookId}`, options)
-    //     const deletedReview = await response.json()
-    //     // window.location.reload(false);
-    //   } catch (err) {
-    //     console.log(err)
-    //   }
-    // }
     return (
       <div>
         <div>Reviews:</div>
