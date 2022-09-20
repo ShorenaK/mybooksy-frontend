@@ -64,7 +64,6 @@ const loading = () => {
 }
   return (
     <div className="book-list">{book? loaded() : loading()}
-    {console.log(book)} 
      </div>
   )
 }
