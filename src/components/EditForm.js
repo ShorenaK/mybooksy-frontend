@@ -1,40 +1,48 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const BASE_URL = process.env.REACT_APP_URL || "http://localhost:4000/";
 
-const getBooks = async (fn) => {
-    try{
-        const response = await fetch(BASE_URL + "books");
-        const allBooks = await response.json();
-        fn(allBooks)
-    } catch (error){
-        console.log(error)
+// const getBooks = async (fn) => {
+//     try{
+//         const response = await fetch(BASE_URL + "books");
+//         const allBooks = await response.json();
+//         fn(allBooks)
+//     } catch (error){
+//         console.log(error)
+//     }
+// }
+
+function EditForm(props) {
+
+    const navigate = useNavigate()
+    const [editForm, setEditForm] = useState(null);
+    const params = useParams()
+    const bookId = params.bookId
+    const URL = BASE_URL + `books/${bookId}`  
+
+    const getBook = async () => {
+        const response = await fetch(URL)
+        const data = await response.json()
+        setEditForm(data)
     }
-}
-
-function BookForm(props) {
-
-
-    const [bookForm, setBookForm] = useState(initForm);
-
 
 
     const handleSubmit = async (e) => {
+        e.preventDefault()
         try {
-            const newBook = { ...bookForm }
-            const output = JSON.stringify(newBook)
+            const output = JSON.stringify(editForm)
             const options = {
-                method: "POST",
+                method: "PUT",
                 headers: {
                     "Content-Type" : "application/json"
                 },
                 body: output
             }
-            const URL = BASE_URL + "books"
             const response = await fetch(URL, options)
             const responseData = await response.json()
-            setBookForm(initForm)
+            console.log(responseData)
+            navigate(`/books/`)
 
         } catch (error) {
             console.log(error)
@@ -42,9 +50,13 @@ function BookForm(props) {
     }
 
     const handleChange = (e) => {
-        const data = { ...bookForm, [e.target.name]: e.target.value }
-        setBookForm(data)
+        const data = { ...editForm, [e.target.name]: e.target.value }
+        setEditForm(data)
     }
+
+    useEffect (() => {
+        getBook()
+    }, [])
 
     return (
         <>
@@ -52,40 +64,40 @@ function BookForm(props) {
             <form onSubmit={handleSubmit}>
                 <label>
                     Title: 
-                    <input type="text" required name="title" placeholder="Enter book name" onChange={handleChange} value={bookForm.title} />
+                    <input type="text" required name="title" placeholder="Enter book name" onChange={handleChange} value={editForm.title} />
                 </label>
                 <label>
                     Book Cover: 
-                    <input type="text" required name="image" placeholder="http://..." onChange={handleChange} value={bookForm.image} />
+                    <input type="text" required name="image" placeholder="http://..." onChange={handleChange} value={editForm.image} />
                 </label>
                 <label>
                     Author: 
-                    <input type="text" required name="author" placeholder="Enter author name" onChange={handleChange} value={bookForm.author} />
+                    <input type="text" required name="author" placeholder="Enter author name" onChange={handleChange} value={editForm.author} />
                 </label>
                 <label>
                     Number of Pages: 
-                    <input type="number" required min={1} name="pages" onChange={handleChange} value={bookForm.pages} />
+                    <input type="number" required min={1} name="pages" onChange={handleChange} value={editForm.pages} />
                 </label>
                 <label>
                     Genre: 
-                    <input type="text" required name="genre" placeholder="Enter book genres" onChange={handleChange} value={bookForm.genre} />
+                    <input type="text" required name="genre" placeholder="Enter book genres" onChange={handleChange} value={editForm.genre} />
                 </label>
                 <label>
                     Description of Book: 
-                    <input type="text" required name="description" placeholder="Enter description of book" onChange={handleChange} value={bookForm.description} />
+                    <input type="text" required name="description" placeholder="Enter description of book" onChange={handleChange} value={editForm.description} />
                 </label>
                 <label>
                     Date of Publication: 
-                    <input type="date" required name="publishDate" onChange={handleChange} value={bookForm.publishDate} />
+                    <input type="date" required name="publishDate" onChange={handleChange} value={editForm.publishDate} />
                 </label>
                 <label>
                     Link to Purchase: 
-                    <input type="text" required name="link" placeholder="http://..." onChange={handleChange} value={bookForm.link} />
+                    <input type="text" required name="link" placeholder="http://..." onChange={handleChange} value={editForm.link} />
                 </label>
-                <input type="Submit" value="Add Book" />
+                <input type="Submit" value="Submit Changes" />
             </form>
         </>
     )
 }
 
-export default BookForm
+export default EditForm
