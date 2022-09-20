@@ -1,14 +1,22 @@
 .App {
   text-align: center;
 }
+.book-list{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 60px;
+}
 
+.spinner {
+width: 24px;
+animation: loading infinite 3s linear;
+}
 
-/* 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+@keyframes loading{
+from{
+  transform: rotateZ(0deg);
+}
+to{
+  transform: rotateZ(360deg);
+}
+}
