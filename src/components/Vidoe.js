@@ -14,10 +14,8 @@ export default function Video() {
     <div className='content'>
       <h1>
       <Link to="/books" className='btn'> Books </Link>
-      <Link to="/books/:bookId" className='btn'> Book </Link> 
     </h1>
     </div>
-   
     </div>
   )
 }

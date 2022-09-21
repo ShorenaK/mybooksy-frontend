@@ -2,7 +2,8 @@
 
  import { useState, useEffect } from "react";
  import {Link} from 'react-router-dom' 
-
+ import dateFormat from 'dateformat'
+ 
 export const Books = (props) => {
     const [books, setBooks] = useState([])
    
@@ -33,7 +34,7 @@ const loaded = ()=>{
            <h2>Author: {book.author}</h2>
            <h3>Genre: {book.genre}</h3>
            <p>Page: {book.pages}</p>
-           <p>Publication Date: {book.publishDate}</p>
+           <p>Publication Date:  {dateFormat(book.publishDate, 'mmmm, dS, yyyy')}</p>
            <p>Likes: {book.likes}</p>
           
         </div>
