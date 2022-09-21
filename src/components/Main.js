@@ -7,7 +7,7 @@ import EditForm from "./EditForm";
 
 
 
-function Main(props) {
+function Main({currentUser, getUser, handleLogin, handleSignup, isAuthenticated}) {
  
     return ( 
        <>
