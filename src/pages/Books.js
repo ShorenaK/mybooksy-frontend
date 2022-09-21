@@ -34,9 +34,10 @@ const loaded = ()=>{
            <h2>Author: {book.author}</h2>
            <h3>Genre: {book.genre}</h3>
            <p>Page: {book.pages}</p>
-           <p>Publication Date:  {dateFormat(book.publishDate, 'mmmm, dS, yyyy')}</p>
-           <p>Likes: {book.likes}</p>
-          
+           <p>{book.description}</p>
+           <p>Publication Date: {book.publishDate}</p>
+            <a href={book.link}>Links</a>
+            <p>Likes: {book.likes}</p>
         </div>
         )})
         } </> )}
