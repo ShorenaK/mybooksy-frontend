@@ -1,18 +1,26 @@
 /* rgba(87, 20, 20, 0.217) */
 .footer{
-    width: 100%;
+     /* position: fixed;  */
+    bottom: 0;
+    width: 100vw;
     padding: 6rem 0;
-    background: rgba(87, 20, 20, 0.217) ;
+    background: rgba(87, 20, 20, 0.217)
 }
 .footer-container {
+    position: absolute;
+    bottom: 0;
     max-width: 1140px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px;
+    width: 100%;
+    padding: 6rem 0;
+ 
 }
 
 .footer .left {
+   position: relative;
     height: 100%;
     max-width: 100%;
     display: flex;
@@ -21,6 +29,7 @@
 }
 
 .footer .right{
+   position: relative;
     height: 100%;
     max-width: 100%;
     display: flex;

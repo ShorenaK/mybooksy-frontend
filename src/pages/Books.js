@@ -3,7 +3,7 @@
  import { useState, useEffect } from "react";
  import {Link} from 'react-router-dom' 
  import dateFormat from 'dateformat'
- 
+ import "../styles/Book.css"
 export const Books = (props) => {
     const [books, setBooks] = useState([])
    
