@@ -1,4 +1,4 @@
-import './styles/App.css';
+import './styles./App.css';
 // IMPORT COMPONENTS
 import Header from "./components/Header"
 import Footer from "./components/Footer"
@@ -12,7 +12,7 @@ function App() {
       <Main />
       <Footer /> 
     </div>
-  );
+  ); 
 }
 
 export default App;
