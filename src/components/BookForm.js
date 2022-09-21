@@ -1,3 +1,4 @@
+import "../styles/BookForm.css"
 import { useState, useEffect } from "react";
 
 const BASE_URL = process.env.REACT_APP_URL || "http://localhost:4000/";
@@ -59,9 +60,10 @@ rm(props) {
         <>
             <h1>Book Form</h1>
             <form onSubmit={handleSubmit}>
+                <div class="bform">
                 <label>
                     Title: 
-                    <input type="text" required name="title" placeholder="Enter book name" onChange={handleChange} value={bookForm.title} />
+                    <input className="title" type="text" required name="title" placeholder="Enter book name" onChange={handleChange} value={bookForm.title} />
                 </label>
                 <label>
                     Book Cover: 
@@ -84,14 +86,15 @@ rm(props) {
                     <input type="text" required name="description" placeholder="Enter description of book" onChange={handleChange} value={bookForm.description} />
                 </label>
                 <label>
-                    Date of Publication: 
-                    <input type="date" required name="publishDate" onChange={handleChange} value={bookForm.publishDate} />
-                </label>
-                <label>
                     Link to Purchase: 
                     <input type="text" required name="link" placeholder="http://..." onChange={handleChange} value={bookForm.link} />
                 </label>
-                <input type="Submit" value="Add Book" />
+                <label>
+                    Date of Publication: 
+                    <input type="date" required name="publishDate" onChange={handleChange} value={bookForm.publishDate} />
+                </label>
+                <button name="Submit" id="button" value="Add Book">Add Book</button>
+                </div>
             </form>
         </>
     )
