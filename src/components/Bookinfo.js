@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams, useNavigate} from "react-router-dom"
 import {Link} from 'react-router-dom' 
+import { BiLike } from "react-icons/bi"
 
 export default function Bookinfo() {
   const [likes, setLikes] = useState(null);
@@ -15,6 +16,7 @@ export default function Bookinfo() {
       const response = await fetch(URL)
       const result = await response.json()
       setBook(result)
+      setLikes(result.likes)
     }catch(err){
       console.log(err)
     }
@@ -49,7 +51,7 @@ const handleSubmit = async (e) => {
       body: 'output'
   } 
   // const response = await fetch(URL, options)
-  setLikes(book.likes + 1)
+  setLikes(likes + 1)
   } catch(error) {
     console.log(error)
   }
@@ -69,7 +71,7 @@ const handleSubmit = async (e) => {
         <a href={book.link}>Links</a>
         <form onSubmit={handleSubmit}>
            <p>{likes}</p>
-            <button type="submit"> Like </button>
+            <button type="submit"><BiLike size={20}/>Like</button>
            </form>
     <div> 
         <Link to={`/books/${bookId}edit/`}><button>Edit book</button></Link>
