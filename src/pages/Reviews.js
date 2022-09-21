@@ -1,4 +1,4 @@
-import {useNavigate, useParams} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom'
 
@@ -30,7 +30,6 @@ function Reviews(){
                 const options = {method: 'DELETE'}
                 const response = await fetch(`https://mybooksy-project.herokuapp.com/reviews/${review._id}`, options)
                 const deletedReview = await response.json()
-                window.location.reload(false);
               }}>Remove Review</button>
             </div>
           )} else {
@@ -42,7 +41,6 @@ function Reviews(){
                 const options = {method: 'DELETE'}
                 const response = await fetch(`https://mybooksy-project.herokuapp.com/reviews/${review._id}`, options)
                 const deletedReview = await response.json()
-                window.location.reload(false);
               }}>Remove Review</button>
             </div>
         )}

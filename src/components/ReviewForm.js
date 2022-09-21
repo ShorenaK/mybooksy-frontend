@@ -28,7 +28,7 @@ function ReviewForm(props) {
             const URL = BASE_URL + "reviews"
             const response = await fetch(URL, options)
             const responseData = await response.json()
-            // setReviewForm(initForm)
+            setReviewForm(initForm)
             navigate(`/books`)
         } catch (error) {
             console.log(error)
