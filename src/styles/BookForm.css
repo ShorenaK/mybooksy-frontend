@@ -10,9 +10,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    padding-right: 450px;
+    align-items: center;
     font-size: 30px;
     font-family: 'Work Sans', sans-serif;
 }
@@ -29,10 +27,10 @@ button:hover {
 
 
 input {
-  padding: 10px;
+align-items: center;
+margin: auto;
+display: block;
+padding: 10px;
 }
 
-@media screen and (max-width:1240px) {
-     
-}
 
