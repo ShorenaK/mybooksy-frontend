@@ -40,7 +40,7 @@
     height: 100vh;
     transition: 0.3s;
     z-index: -1;
-    background: rgba(47, 46, 46, 0.9);
+    background: rgba(87, 20, 20, 0.217)
    }
    .nav-menu.active{
     left:0;

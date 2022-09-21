@@ -36,9 +36,15 @@ body {
     color: white;
     cursor: pointer;
   }
-  .btn-light{
+  /* .btn-light{
     background: rgba(172, 154, 154, 0.2);
+  } */
+  .btn-light{
+    background: rgba(87, 20, 20, 0.217);
   }
-  .btn:hover{
+  /* .btn:hover{
     background: rgba(225,225,225, .2);
+  } */
+  .btn:hover{
+    background: rgba(87, 20, 20, 0.217);
   }
