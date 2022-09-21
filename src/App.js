@@ -3,7 +3,7 @@ import './styles/App.css';
 import Footer from "./components/Footer"
 import Main from './components/Main';
 import {getUserToken, setUserToken, clearUserToken} from "./utils/authToken"
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import decode from "jwt-decode"
 import Navbar from './components/Navbar';
 
