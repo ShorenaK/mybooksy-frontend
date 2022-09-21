@@ -2,6 +2,7 @@ import {useState} from "react"
 import '../styles/Navbar.css';
 import {Link} from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
+import AuthForm from "./AuthForm";
 
 
 

@@ -26,3 +26,5 @@ function AuthForm(props) {
         </form>
     )
 }
+
+export default AuthForm
