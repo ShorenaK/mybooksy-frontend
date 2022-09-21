@@ -1,6 +1,7 @@
 import {useParams} from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom'
+import {BsFillEmojiSmileFill, BsFillEmojiExpressionlessFill} from 'react-icons/bs'
 
 function Reviews(){
 
@@ -25,7 +26,7 @@ function Reviews(){
           return (
             <div className='review-wrapper'>
               <p>{review.comment}</p>
-              <p>I Recommend</p>
+              <h1><BsFillEmojiSmileFill /></h1>
               <Link to={`/reviews/${review._id}/edit/`}><button>Edit Review</button></Link>
               <button className="delete" onClick={async ()=> {
                 const options = {method: 'DELETE'}
@@ -37,7 +38,7 @@ function Reviews(){
             return(
             <div className='review-wrapper'>
               <p>{review.comment}</p>
-              <p>I do not Recommend</p>
+              <h1><BsFillEmojiExpressionlessFill /></h1>
               <Link to={`/reviews/${review._id}/edit/`}><button>Edit Review</button></Link>
               <button className="delete" onClick={async ()=> {
                 const options = {method: 'DELETE'}
