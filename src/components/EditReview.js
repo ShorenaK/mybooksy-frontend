@@ -64,6 +64,7 @@ function EditReview(props) {
                     Comment:
                     <input type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={editForm.comment} />
                 </label>
+                <input type="Submit" value="Submit Changes" />
             </form>
             </> : null}
         </>

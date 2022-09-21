@@ -20,8 +20,8 @@ function Main(props) {
         <Route exact path="/reviews/:bookId/edit" element={<EditReview />} />
         <Route exact path="/books/:bookId/edit" element={<EditForm />}/>
       </Routes>
-     </> 
-     ) 
+     </>
+     )
   }
   
   export default Main;
