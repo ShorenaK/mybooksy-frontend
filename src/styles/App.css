@@ -35,7 +35,7 @@ border-radius: 10px;
 }
 
 
- .book {
+ /* .book {
     display: grid;
     grid-template-areas:
         "title"
@@ -47,7 +47,7 @@ border-radius: 10px;
         "publishDate"
         "link"
         "label"
-} 
+}  */
 .book{
    border: 1px solid black; 
    border-radius: 20px;
@@ -60,7 +60,7 @@ border-radius: 10px;
     grid-area: image;
     width: auto;
     height: 50vh;
-    margin-left: 100px;
+    /* margin-left: 100px; */
 }
 
 .book h2:first-of-type {

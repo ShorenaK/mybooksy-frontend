@@ -49,7 +49,6 @@ useEffect(()=>{
         <p>Page: {book.pages}</p>
         <p>{book.description}</p>
         <p>Publication Date: {book.publishDate}</p>
-        <a href={book.link}>Links</a>
         <p>Likes: {book.likes}</p>
     <div> 
         <Link to={`/books/${bookId}edit/`}><button>Edit book</button></Link>
