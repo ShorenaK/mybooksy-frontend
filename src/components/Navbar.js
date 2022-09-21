@@ -26,15 +26,6 @@ function Navbar() {
         <li>
             <Link to="/books/add">Add Book</Link>
         </li> 
-        <li>
-            <Link to="/books/add">Add Book</Link>
-        </li>
-        <li>
-            <Link to="/reviews/:bookId/add">Reviews</Link>
-        </li>
-        <li>
-            <Link to="/books/:bookId/edit">Edit Reviews</Link>
-        </li>
         </ul>
         <div className='hamburger' onClick={handleClick}> 
           {click ? (<FaTimes size={20} style={{color:'#fff'}}/>) : (<FaBars size={20} style={{color:'#fff'}} />)}

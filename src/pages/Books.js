@@ -3,7 +3,7 @@
  import { useState, useEffect } from "react";
  import {Link} from 'react-router-dom' 
  import dateFormat from 'dateformat'
- 
+ import "../styles/Book.css"
 export const Books = (props) => {
     const [books, setBooks] = useState([])
    
@@ -31,13 +31,11 @@ const loaded = ()=>{
           <Link to={`/books/${book._id}`}> 
           <img src={book.image}  alt="book"/>
           </Link>
-           <h2>Author: {book.author}</h2>
-           <h3>Genre: {book.genre}</h3>
+           <h4>Author: {book.author}</h4>
+           <p>Genre: {book.genre}</p>
            <p>Page: {book.pages}</p>
-           <p>{book.description}</p>
-           <p>Publication Date: {book.publishDate}</p>
-            <a href={book.link}>Links</a>
-            <p>Likes: {book.likes}</p>
+           <p>Publication Date:  {dateFormat(book.publishDate, 'mmmm, dS, yyyy')}</p>
+           <p>Likes: {book.likes}</p>
         </div>
         )})
         } </> )}

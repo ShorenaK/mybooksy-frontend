@@ -1,9 +1,13 @@
-.App {
+/* .App {
   text-align: center;
-}
-.book-list{
+} */
+
+
+/* .book-list{
+  margin-left: 30px;
+  margin-right: 30px;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(4,1fr);
   gap: 60px;
 }
 
@@ -22,11 +26,11 @@ to{
 }
 .book-list a{
   text-decoration: none;
-  color: black;
+  color: rgba(87, 20, 20, 0.217);
 }
 
 .book-card {
-border: 1px solid black;
+border: 1px solid rgba(87, 20, 20, 0.217);
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
@@ -48,24 +52,24 @@ border-radius: 10px;
         "link"
         "label"
 }  */
-.book{
-   border: 1px solid black; 
+/* .book{
+   border: 1px solid rgba(87, 20, 20, 0.217); 
    border-radius: 20px;
 }
 .book>h1 {
     grid-area: title;
-}
+} */
 
-.book>img {
+/* .book>img {
     grid-area: image;
     width: auto;
     height: 50vh;
     /* margin-left: 100px; */
-}
+/* } */
 
-.book h2:first-of-type {
-    grid-area: name;
-}
+/* .book h2:first-of-type {
+    grid-area: name;  */
+/* }
 
 .book h2:last-of-type {
     grid-area: label;
@@ -77,10 +81,10 @@ border-radius: 10px;
     padding: 8px 24px;
     border-radius: 4px;
     transition: transform .5s ease-in-out;
-}
-.delete:hover {
+} */
+/* .delete:hover {
     border: 1px solid #ddd;
-    background-color: black;
+    background-color: rgba(87, 20, 20, 0.217);
     color: white;
     transform: scale(1.1, 1.1);
-}
+} */ 

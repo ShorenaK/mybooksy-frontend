@@ -30,7 +30,7 @@ const removeBook = async () => {
       const response = await fetch(URL, options)
       const deletedBook = await response.json()
        console.log(deletedBook)
-      navigate('/')
+      navigate('/books')
   } catch (err) {
       console.log(err)
       navigate(URL)
