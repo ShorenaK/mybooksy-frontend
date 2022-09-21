@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react"
 import { useParams, useNavigate} from "react-router-dom"
 import {Link} from 'react-router-dom' 
-
+import { BiLike } from "react-icons/bi"
 
 export default function Bookinfo() {
+  const [likes, setLikes] = useState(null);
   const [book, setBook ]= useState(null)
   const params = useParams()
   const bookId = `${params.bookId}/`
@@ -15,6 +16,7 @@ export default function Bookinfo() {
       const response = await fetch(URL)
       const result = await response.json()
       setBook(result)
+      setLikes(result.likes)
     }catch(err){
       console.log(err)
     }
@@ -38,6 +40,23 @@ useEffect(()=>{
   getBook()
 }, [])
 
+const handleSubmit = async (e) => {
+  e.preventDefault()
+  try {
+    const options = {
+      method: "PUT",
+      headers: {
+          "Content-Type" : "application/json"
+      },
+      body: 'output'
+  } 
+  // const response = await fetch(URL, options)
+  setLikes(likes + 1)
+  } catch(error) {
+    console.log(error)
+  }
+} 
+
   const loaded = () => (
    
   <div className="book">
@@ -50,7 +69,10 @@ useEffect(()=>{
         <p>{book.description}</p>
         <p>Publication Date: {book.publishDate}</p>
         <a href={book.link}>Links</a>
-        <p>Likes: {book.likes}</p>
+        <form onSubmit={handleSubmit}>
+           <p>{likes}</p>
+            <button type="submit"><BiLike size={20}/>Like</button>
+           </form>
     <div> 
         <Link to={`/books/${bookId}edit/`}><button>Edit book</button></Link>
         <button className="delete" onClick={removeBook}>

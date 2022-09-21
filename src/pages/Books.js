@@ -2,7 +2,8 @@
 
  import { useState, useEffect } from "react";
  import {Link} from 'react-router-dom' 
-
+ import dateFormat from 'dateformat'
+ 
 export const Books = (props) => {
     const [books, setBooks] = useState([])
    
@@ -23,7 +24,6 @@ export const Books = (props) => {
 const loaded = ()=>{
   return (
     <>
-    <Link to={`/books/add/`}><p>Add book</p></Link>
   {books?.map((book)=>{
        return (
          <div key={book._id} className="book-card">
@@ -37,8 +37,7 @@ const loaded = ()=>{
            <p>{book.description}</p>
            <p>Publication Date: {book.publishDate}</p>
             <a href={book.link}>Links</a>
-           <p>Likes: {book.likes}</p>
-          
+            <p>Likes: {book.likes}</p>
         </div>
         )})
         } </> )}
