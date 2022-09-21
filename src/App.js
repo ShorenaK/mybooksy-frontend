@@ -89,12 +89,11 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar user={currentUser} handleLogout={logoutUser}/>
+      <Navbar user={currentUser} handleLogout={logoutUser} handleLogin={loginUser}/>
       <Main 
         getUser={getUser} 
         currentUser={currentUser}
         isAuthenticated={isAuthenticated}
-        handleLogin={loginUser}
         handleSignup={registerUser}
         handleLogout={logoutUser}
       />
