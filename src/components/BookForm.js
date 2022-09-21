@@ -12,8 +12,7 @@ const getBooks = async (fn) => {
         console.log(error)
     }
 }
-function BookFo
-rm(props) {
+function BookForm(props) {
 
     const initForm = {
         title: '',
