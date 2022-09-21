@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
+h1 {
+    font-size: 50px;
+    font-family: 'Righteous', cursive;
+}
+
+.bform {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 450px;
+    font-size: 30px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+button {
+  padding-inline: 58px;
+  margin-top: 20px;
+  background-color: rgb(127, 253, 127);
+}
+
+button:hover {
+    background-color: rgb(200, 254, 129);
+}
+
+
+input {
+  padding: 10px;
+}
+
+@media screen and (max-width:1240px) {
+     
+}
+
