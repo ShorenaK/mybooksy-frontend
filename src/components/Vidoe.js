@@ -1,7 +1,7 @@
 import '../styles/Video.css'
 import{Link} from 'react-router-dom'
 
-import bookVideo from '../assests/Books.mp4'
+import bookVideo from '../assets/Books.mp4'
 
 
 export default function Video() {
