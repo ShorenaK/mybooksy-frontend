@@ -27,9 +27,6 @@ function Navbar() {
             <Link to="/books/add">Add Book</Link>
         </li> 
         <li>
-            <Link to="/books/:bookId">Show Page</Link>
-        </li>
-        <li>
             <Link to="/books/add">Add Book</Link>
         </li>
         <li>
