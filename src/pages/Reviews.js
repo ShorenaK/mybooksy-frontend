@@ -26,6 +26,7 @@ function Reviews(){
             <div className='review-wrapper'>
               <p>{review.comment}</p>
               <p>I Recommend</p>
+              <Link to={`/reviews/${bookId}edit/`}><button>Edit Review</button></Link>
               <button className="delete" onClick={async ()=> {
                 const options = {method: 'DELETE'}
                 const response = await fetch(`https://mybooksy-project.herokuapp.com/reviews/${review._id}`, options)
@@ -37,6 +38,7 @@ function Reviews(){
             <div className='review-wrapper'>
               <p>{review.comment}</p>
               <p>I do not Recommend</p>
+              <Link to={`/reviews/${bookId}edit/`}><button>Edit Review</button></Link>
               <button className="delete" onClick={async ()=> {
                 const options = {method: 'DELETE'}
                 const response = await fetch(`https://mybooksy-project.herokuapp.com/reviews/${review._id}`, options)

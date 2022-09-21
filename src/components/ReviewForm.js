@@ -15,6 +15,7 @@ function ReviewForm(props) {
     const [reviewForm, setReviewForm] = useState(initForm);
 
     const handleSubmit = async (e) => {
+        e.preventDefault()
         try {
             const newReview = {...reviewForm}
             const output = JSON.stringify(newReview)
@@ -29,7 +30,7 @@ function ReviewForm(props) {
             const response = await fetch(URL, options)
             const responseData = await response.json()
             setReviewForm(initForm)
-            navigate(`/books`)
+            navigate(`/books/${bookId}`)
         } catch (error) {
             console.log(error)
         }   
@@ -49,9 +50,10 @@ function ReviewForm(props) {
                     Yes
                 </label>
                 <label>
-                    <input type='radio' required name="recommend" onChange={handleChange} value={reviewForm.recommend = false} />
+                    <input type="radio" required name="recommend" onChange={handleChange} value={reviewForm.recommend = false} />
                     No
                 </label>
+                <br></br>
                 <label>
                     Comment:
                     <input type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={reviewForm.comment} />
