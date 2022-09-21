@@ -6,7 +6,7 @@ import AuthForm from "./AuthForm";
 
 
 
-function Navbar({handleLogin}) {
+function Navbar({handleLogin, handleSignup}) {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
 
