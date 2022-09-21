@@ -19,7 +19,7 @@ function Reviews(){
     return (
       <div>
         <div>Reviews:</div>
-        <Link to={`/reviews/${bookId}add/`}><p>Add Review</p></Link>
+        <Link to={`/reviews/${bookId}add/`}><button>Add Review</button></Link>
         {variable.map((review, idx) => {
           if (review.recommend == true) {
           return (
