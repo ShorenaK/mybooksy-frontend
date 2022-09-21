@@ -31,12 +31,11 @@ const loaded = ()=>{
           <Link to={`/books/${book._id}`}> 
           <img src={book.image}  alt="book"/>
           </Link>
-           <h2>Author: {book.author}</h2>
-           <h3>Genre: {book.genre}</h3>
+           <h4>Author: {book.author}</h4>
+           <p>Genre: {book.genre}</p>
            <p>Page: {book.pages}</p>
            <p>Publication Date:  {dateFormat(book.publishDate, 'mmmm, dS, yyyy')}</p>
            <p>Likes: {book.likes}</p>
-          
         </div>
         )})
         } </> )}

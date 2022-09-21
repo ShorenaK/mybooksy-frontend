@@ -7,7 +7,7 @@
     background: rgba(87, 20, 20, 0.217)
 }
 .footer-container {
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     max-width: 1140px;
     margin: auto;

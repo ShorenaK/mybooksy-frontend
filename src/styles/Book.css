@@ -2,13 +2,16 @@ div {
     opacity: none;
   }
   .book-list{
+    margin-top: 10rem;
     margin-left: 30px;
     margin-right: 30px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 60px;
   }
-  
+  h4, p{
+    color: rgb(132, 98, 98);
+  }
   .spinner {
   width: 24px;
   animation: loading infinite 3s linear;
@@ -36,7 +39,9 @@ div {
   border-radius: 10px;
   }
   
-  
+  h4, p{
+    color: rgba(165, 42, 42, 0.467);
+  }
    /* .book {
       display: grid;
       grid-template-areas:
