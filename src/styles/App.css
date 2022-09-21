@@ -1,0 +1,86 @@
+.App {
+  text-align: center;
+}
+.book-list{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 60px;
+}
+
+.spinner {
+width: 24px;
+animation: loading infinite 3s linear;
+}
+
+@keyframes loading{
+from{
+  transform: rotateZ(0deg);
+}
+to{
+  transform: rotateZ(360deg);
+}
+}
+.book-list a{
+  text-decoration: none;
+  color: black;
+}
+
+.book-card {
+border: 1px solid black;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+text-align: center;
+border-radius: 10px;
+}
+
+
+ .book {
+    display: grid;
+    grid-template-areas:
+        "title"
+        "image"
+        "author"
+        "genre"
+        "pages"
+        "description"
+        "publishDate"
+        "link"
+        "label"
+} 
+.book{
+   border: 1px solid black; 
+   border-radius: 20px;
+}
+.book>h1 {
+    grid-area: title;
+}
+
+.book>img {
+    grid-area: image;
+    width: auto;
+    height: 50vh;
+    margin-left: 100px;
+}
+
+.book h2:first-of-type {
+    grid-area: name;
+}
+
+.book h2:last-of-type {
+    grid-area: label;
+}
+
+.delete {
+    border: 1px solid #ddd;
+    background-color: transparent;
+    padding: 8px 24px;
+    border-radius: 4px;
+    transition: transform .5s ease-in-out;
+}
+.delete:hover {
+    border: 1px solid #ddd;
+    background-color: black;
+    color: white;
+    transform: scale(1.1, 1.1);
+}
