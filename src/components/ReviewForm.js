@@ -8,7 +8,7 @@ function ReviewForm(props) {
     const bookId = params.bookId;
     const navigate = useNavigate();
     const initForm = {
-        recommend: '',
+        recommend: true,
         comment: '',
         book: bookId,
     }
@@ -46,11 +46,9 @@ function ReviewForm(props) {
             <h1>Write a new review!</h1>
             <form onSubmit={handleSubmit}>
                 <label>Would you recommend this book:
-                    <input type="radio" required name="recommend" onChange={handleChange} value={reviewForm.recommend = true} />
+                    <input type="radio" required name="recommend" onChange={handleChange} value={true} />
                     Yes
-                </label>
-                <label>
-                    <input type="radio" required name="recommend" onChange={handleChange} value={reviewForm.recommend = false} />
+                    <input type="radio" required name="recommend" onChange={handleChange} value={false} />
                     No
                 </label>
                 <br></br>

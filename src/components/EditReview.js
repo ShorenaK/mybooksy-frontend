@@ -7,8 +7,8 @@ function EditReview(props) {
     const navigate = useNavigate()
     const [editForm, setEditForm] = useState(null);
     const params = useParams()
-    const bookId = params.bookId
-    const URL = BASE_URL + `reviews`
+    const reviewId = params.reviewId
+    const URL = BASE_URL + `reviews/${reviewId}`
 
     const getReview = async () => {
         const response = await fetch(URL)
@@ -29,7 +29,7 @@ function EditReview(props) {
             }
             const response = await fetch(URL, options)
             const responseData = await response.json()
-            navigate(`/books/${bookId}`)
+            navigate(`/books`)
         } catch (error) {
             console.log(error)
         }

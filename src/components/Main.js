@@ -17,7 +17,7 @@ function Main(props) {
         <Route  exact path="/books/:bookId" element={<Show />}/> 
         <Route exact path="/books/add" element={<BookForm />}/>
         <Route exact path="/reviews/:bookId/add" element={<ReviewForm />} />
-        <Route exact path="/reviews/:bookId/edit" element={<EditReview />} />
+        <Route exact path="/reviews/:reviewId/edit" element={<EditReview />} />
         <Route exact path="/books/:bookId/edit" element={<EditForm />}/>
       </Routes>
      </>
