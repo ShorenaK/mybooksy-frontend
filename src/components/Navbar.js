@@ -6,14 +6,14 @@ import AuthForm from "./AuthForm";
 
 
 
-function Navbar() {
+function Navbar({handleLogin}) {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
 
   return (
     <header className='header'>
         <Link to="/"></Link>
-
+        <AuthForm signal={handleLogin}/>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         <li>
             <Link to="/">Home</Link>
