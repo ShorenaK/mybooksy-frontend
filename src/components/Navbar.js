@@ -30,10 +30,7 @@ import { getUserToken } from '../utils/authToken'
 function Navbar({handleLogout, user, getUser}) {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
-
-    useEffect(()=>{
-      getUser()
-    }, [])
+    const getUser = getUser
 
   return (
     <header className='header'>
