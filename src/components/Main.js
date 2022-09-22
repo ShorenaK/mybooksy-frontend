@@ -6,6 +6,7 @@ import ReviewForm from "./ReviewForm"
 import EditForm from "./EditForm";
 import EditReview from "./EditReview";
 import Home from "./Home";
+import AuthForm from "./AuthForm";
 
 
 function Main({currentUser, getUser, handleLogin, handleSignup, isAuthenticated}) {
@@ -21,6 +22,9 @@ function Main({currentUser, getUser, handleLogin, handleSignup, isAuthenticated}
         <Route exact path="/reviews/:bookId/add" element={<ReviewForm />} />
         <Route exact path="/reviews/:reviewId/edit" element={<EditReview />} />
         <Route exact path="/books/:bookId/edit" element={<EditForm />}/>
+        <Route exact path="/login" element={<AuthForm signal={handleLogin} login/>} />
+        <Route exact path="/register" element={<AuthForm signal={handleSignup} />} />
+
       </Routes>
      </>
      )

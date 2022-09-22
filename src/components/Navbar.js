@@ -2,18 +2,15 @@ import {useState} from "react"
 import '../styles/Navbar.css';
 import {Link} from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
-import AuthForm from "./AuthForm";
 
 
-
-function Navbar({handleLogin, handleSignup}) {
+function Navbar() {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
 
   return (
     <header className='header'>
         <Link to="/"></Link>
-        <AuthForm signal={handleLogin}/>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         <li>
             <Link to="/">Home</Link>
