@@ -52,27 +52,22 @@ function EditReview(props) {
         <>
             {editForm ?
             <div className="add_review">
-            <h1>Edit Review</h1>
+            <h1>Edit Review ! </h1>
             <form onSubmit={handleSubmit}>
                 <label> 
                     Would you recommend this book:
-                    <input type="radio" required name="recommend" onChange={handleChange} value={true} />
-                   <p>YES</p> 
+                    <input type="radio" required name="recommend" onChange={handleChange} value={editForm.recommend = true} />
+                   Yes
                  </label> 
                    <label>
-                    <input type="radio" required name="recommend" onChange={handleChange} value={false} />
-                    <p>NO</p>
+                    <input type="radio" required name="recommend" onChange={handleChange} value={editForm.recommend = false} />
+                    No
                     </label>
                     <br></br>
                 <label>
-                    <p>Comment:</p>
-                    <input className="input_place" type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={editForm.comment}/>
+                Comment:   <input className="input_place" type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={editForm.comment}/>
                 </label>
-<<<<<<< HEAD
-                <input className="submit" type="Submit" value="Submit Changes" />
-=======
-                <input className="delete" type="Submit" value="Submit Changes" />
->>>>>>> d3108adbdafd27e60727707ff7a71385f5a09c8a
+                <input className="delete" style={{ marginLeft: '2rem'}} type="Submit" value="Submit Changes" />
             </form>
             </div> : null}
         </>
