@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
 
 
-function Navbar() {
+function Navbar({handleLogout, user}) {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
 
@@ -12,18 +12,25 @@ function Navbar() {
     <header className='header'>
         <Link to="/"></Link>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+        { user ?
+        <li>Welcome, {user.username}</li>
+        : null} 
         <li>
             <Link to="/">Home</Link>
         </li>
         <li>
             <Link to="/books">Books</Link>
         </li>
-        <li>
+        { user ? (<Link onClick={handleLogout} to="/">Logout</Link>) :
+        <>
+          <li>
             <Link to="/login">Login</Link>
-        </li>
-        <li>
+          </li>
+          <li>
             <Link to="/register">Sign Up</Link>
-        </li>
+          </li>
+        </>
+        }
         <li>
             <Link to="/books/add">Add Book</Link>
         </li> 
