@@ -4,13 +4,13 @@ import Reviews from "../pages/Reviews";
 
 import Bookinfo from "../components/Bookinfo"
 
-export const Show = () => {
+export const Show = ({user}) => {
   
   return (
 
     <div>
       <div> 
-        <Bookinfo /> 
+        <Bookinfo user={user}/> 
       </div>
       <div>
         <Reviews /> 
