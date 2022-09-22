@@ -40,7 +40,7 @@ useEffect(()=>{
   getBook()
 }, [])
 
-const handleSubmit = async (e) => {
+const handleSubmitLike = async (e) => {
   e.preventDefault()
   book.likes.push(userInfo._id)
   const output = JSON.stringify(book)
@@ -61,6 +61,28 @@ const handleSubmit = async (e) => {
   }
 } 
 
+const handleSubmitUnlike = async (e) => {
+  e.preventDefault()
+  const index = book.likes.indexOf(userInfo._id)
+  book.likes.splice(index, 1)
+  const output = JSON.stringify(book)
+  try {
+    const options = {
+      method: "PUT",
+      headers: {
+          "Content-Type" : "application/json"
+      },
+      body: output
+  } 
+  const response = await fetch(URL, options)
+  const responseData = await response.json()
+  console.log(responseData)
+  setLikes(likes - 1)
+  } catch(error) {
+    console.log(error)
+  }
+} 
+
   const loaded = () => (
    
   <div className="book">
@@ -73,10 +95,18 @@ const handleSubmit = async (e) => {
         <p>{book.description}</p>
         <p>Publication Date: {book.publishDate}</p>
         <a href={book.link}>Links</a>
-        <form onSubmit={handleSubmit}>
+        
+        {book.likes.includes(userInfo._id) ? 
+        <form onSubmit={handleSubmitUnlike}>
+          <p>{likes}</p>
+          <button type="submit"><BiLike size={20}/>Unlike</button>
+        </form>
+        : 
+        <form onSubmit={handleSubmitLike}>
           <p>{likes}</p>
           <button type="submit"><BiLike size={20}/>Like</button>
         </form>
+        }
     <div> 
         <Link to={`/books/${bookId}edit/`}><button>Edit book</button></Link>
         <button className="delete" onClick={removeBook}>
