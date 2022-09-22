@@ -19,6 +19,7 @@ function AuthForm({signal, ...userLogin}) {
             navigate('/', {replace: true})
         }catch(error){
             console.log(error)
+            navigate('/login', {replace: true})
         }
     }
 

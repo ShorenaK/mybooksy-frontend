@@ -18,9 +18,12 @@ function Navbar() {
         <li>
             <Link to="/books">Books</Link>
         </li>
-         {/* <li>
-            <Link to={`/books/add/`}><p>Add book</p></Link>
-        </li>  */}
+        <li>
+            <Link to="/login">Login</Link>
+        </li>
+        <li>
+            <Link to="/register">Sign Up</Link>
+        </li>
         <li>
             <Link to="/books/add">Add Book</Link>
         </li> 
