@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams} from "react-router-dom";
-
+import "../styles/ReviewForm.css"
 const BASE_URL = "https://mybooksy-project.herokuapp.com/"
 
 function ReviewForm(props) {
@@ -42,23 +42,23 @@ function ReviewForm(props) {
     }
 
     return (
-        <>
+        <div className="form">
             <h1>Write a new review!</h1>
             <form onSubmit={handleSubmit}>
-                <label>Would you recommend this book:
-                    <input type="radio" required name="recommend" onChange={handleChange} value={true} />
-                    Yes
-                    <input type="radio" required name="recommend" onChange={handleChange} value={false} />
-                    No
+                <label>Would you recommend this book:  
+                <input className="radio" type="radio" required name="recommend" onChange={handleChange} value={true} /> 
+               Yes
+                    <input className="radio" type="radio" required name="recommend" onChange={handleChange} value={false} />  
+                No
                 </label>
                 <br></br>
                 <label>
-                    Comment:
-                    <input type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={reviewForm.comment} />
+                   
+                Comment:   <input type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={reviewForm.comment} />
                 </label>
-                <input type='Submit' value="Add Review" />
+                <input className="delete" style={{ marginLeft: '2rem'}}type='Submit' value="Add Review" />
             </form>
-        </>
+        </div>
     )
 }
 

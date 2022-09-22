@@ -35,7 +35,7 @@ function Navbar({handleLogout, user}) {
         <Link to="/"></Link>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         { user ?
-        <li>Welcome, {user.username}</li>
+        <li size={60} style={{color:'#fff'}}>Welcome!  {user.username}</li>
         : null} 
         <li>
             <Link to="/">Home</Link>

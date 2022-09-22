@@ -96,7 +96,7 @@ function BookForm(props) {
                     Date of Publication: 
                     <input type="date" required name="publishDate" onChange={handleChange} value={bookForm.publishDate} />
                 </label>
-                <button name="Submit" id="button" value="Add Book">Add Book</button>
+                <button size={80}  style={{color:'rgb(107, 38, 38)', marginBottom: '10rem'}} className="delete" name="Submit" id="button" value="Add Book">Add Book</button>
                 </div>
             </form>
         </>

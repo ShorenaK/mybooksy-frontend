@@ -18,9 +18,9 @@ function Reviews({user}){
     })
     return (
       <div>
-        <div>Reviews:</div>
+        <h4>Reviews:</h4>
         { user ?
-          <Link to={`/reviews/${bookId}add/`}><button>Add Review</button></Link>
+         <Link to={`/reviews/${bookId}add/`}><button className='delete'>Add Review</button></Link>
         : null }
         {variable.map((review, idx) => {
           if (review.recommend == true) {
@@ -30,7 +30,7 @@ function Reviews({user}){
               <h1><BsFillEmojiSmileFill /></h1>
               {user ?
               <>
-              <Link to={`/reviews/${review._id}/edit/`}><button>Edit Review</button></Link>
+            <Link to={`/reviews/${review._id}/edit/`}><button className='delete'>Edit Review</button></Link>
               <button className="delete" onClick={async ()=> {
                 const options = {method: 'DELETE'}
                 const response = await fetch(`https://mybooksy-project.herokuapp.com/reviews/${review._id}`, options)
@@ -44,9 +44,11 @@ function Reviews({user}){
             <div className='review-wrapper'>
               <p>{review.comment}</p>
               <h1><BsFillEmojiExpressionlessFill /></h1>
+
               {user ?
               <>
-              <Link to={`/reviews/${review._id}/edit/`}><button>Edit Review</button></Link>
+              <Link to={`/reviews/${review._id}/edit/`}><button className='delete'>Edit Review</button></Link>
+              
               <button className="delete" onClick={async ()=> {
                 const options = {method: 'DELETE'}
                 const response = await fetch(`https://mybooksy-project.herokuapp.com/reviews/${review._id}`, options)
