@@ -17,13 +17,21 @@ Click on this link ==>
 React, MongoDB, Express, Node, CSS
 
 ## Resources
-
+- Google
+- StackOverflow
+- Figma
+- Canva
+- Imgur
+- Miro
 
 ## Next Steps
-We would like to implement a search bar for best user experience, add a favorite book feature connected to the user that will add that specific book to a "favorites" list and finally stronger password required.
+We would like to implement a search bar for best user experience, add a favorite book section connected to the user that will add that specific book to a "favorites" list and finally a "stronger password required" feature.
 
 ## Developers
-| Alfred Jordan Burgess | Shorena Anzhilov | Shahryar Abbasi | Nathalie Coursey |
+- [Jordan Burgess](https://github.com/Jordan-Burgess)
+- [Shorena Anzhilov](https://github.com/ShorenaK) 
+- [Shahryar Abbasi](https://github.com/ShahryarAbbasi) 
+- [Nathalie Coursey](https://github.com/NathCoursey)
 
 ## Support
-Any concerns or questions? Feel free to contact:
+Any concerns or questions? Feel free to contact: sei725project3@gmail.com
