@@ -99,12 +99,12 @@ const handleSubmitUnlike = async (e) => {
         {book.likes.includes(userInfo._id) ? 
         <form onSubmit={handleSubmitUnlike}>
           <p>{likes}</p>
-        <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}><BiLike  style={{color:'rgb(107, 38, 38)'}}/>UnLike</button>
+        <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}><BiLike style={{color:'rgb(107, 38, 38)'}}/>   UnLike </button>
         </form>
         : 
         <form onSubmit={handleSubmitLike}>
           <p>{likes}</p>
-         <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}><BiLike style={{color:'rgb(107, 38, 38)'}}/>Like</button>
+         <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}><BiLike style={{color:'rgb(107, 38, 38)'}}/>     Like </button>
         </form>
         }
     <div> 

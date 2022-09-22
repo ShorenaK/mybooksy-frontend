@@ -50,7 +50,6 @@ function ReviewForm(props) {
                Yes
                     <input className="radio" type="radio" required name="recommend" onChange={handleChange} value={false} />  
                 No
-
                 </label>
                 <br></br>
                 <label>
