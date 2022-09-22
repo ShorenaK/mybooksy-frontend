@@ -19,16 +19,16 @@ function Reviews(){
     })
     return (
       <div>
-        <h4>Reviews:</h4>
-        <Link to={`/reviews/${bookId}add/`}><button className='delete'>Add Review</button></Link>
+             <h4>   Reviews:</h4>
+        <Link to={`/reviews/${bookId}add/`}><button className='delete' style={{color:'rgb(107, 38, 38)', marginBottom:'2rem', marginLeft:'0.5rem',marginRight:'0.5rem',marginTop:'0.5rem'}}>Add Review</button></Link>
         {variable.map((review, idx) => {
           if (review.recommend == true) {
           return (
             <div className='review-wrapper'>
               <p>{review.comment}</p>
               <h1><BsFillEmojiSmileFill /></h1>
-              <Link to={`/reviews/${review._id}/edit/`}><button className='delete'>Edit Review</button></Link>
-              <button className="delete" onClick={async ()=> {
+              <Link to={`/reviews/${review._id}/edit/`}><button className='delete' style={{color:'rgb(107, 38, 38)', marginBottom: '2rem', marginLeft:'0.5rem',marginRight:'0.5rem',marginTop:'0.5rem'}}>Edit Review</button></Link>
+              <button className="delete" style={{color:'rgb(107, 38, 38)', marginBottom:'3rem', marginLeft:'0.5rem',marginRight:'0.5rem',marginTop:'0.5rem'}} onClick={async ()=> {
                 const options = {method: 'DELETE'}
                 const response = await fetch(`https://mybooksy-project.herokuapp.com/reviews/${review._id}`, options)
                 const deletedReview = await response.json()
@@ -39,7 +39,7 @@ function Reviews(){
             <div className='review-wrapper'>
               <p>{review.comment}</p>
               <h1><BsFillEmojiExpressionlessFill /></h1>
-              <Link to={`/reviews/${review._id}/edit/`}><button >Edit Review</button></Link>
+              <Link to={`/reviews/${review._id}/edit/`}><button className='delete' style={{color:'rgb(107, 38, 38)', marginBottom:'3rem', marginLeft:'0.5rem',marginRight:'0.5rem',marginTop:'0.5rem'}}>Edit Review</button></Link>
               <button className="delete" onClick={async ()=> {
                 const options = {method: 'DELETE'}
                 const response = await fetch(`https://mybooksy-project.herokuapp.com/reviews/${review._id}`, options)
