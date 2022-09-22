@@ -1,16 +1,17 @@
-div {
-    opacity: none;
-  }
+ 
   .book-list{
-    margin-top: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     margin-left: 30px;
     margin-right: 30px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    /* grid-template-columns: repeat(4,1fr); */
+    grid-template-columns: auto auto auto auto;
     gap: 60px;
+    /* width: 200px; */
   }
-  h4, p{
-    color: rgb(132, 98, 98);
+  h4{
+    color: rgb(107, 38, 38);
   }
   .spinner {
   width: 24px;
@@ -39,8 +40,14 @@ div {
   border-radius: 10px;
   }
   
-  h4, p{
-    color: rgba(165, 42, 42, 0.467);
+  p{
+    color: rgba(47, 18, 18, 0.282);
+     font-style:inherit;
+     font-weight: bolder;
+  }
+  h2{
+    color: rgba(47, 18, 18, 0.282);
+
   }
    /* .book {
       display: grid;
@@ -79,15 +86,25 @@ div {
   }
   
   .delete {
-      border: 1px solid #ddd;
+      border: 1px solid  rgb(107, 38, 38);;
       background-color: transparent;
       padding: 8px 24px;
       border-radius: 4px;
       transition: transform .5s ease-in-out;
   }
   .delete:hover {
-      border: 1px solid #ddd;
+      border: 1px solid rgb(136, 7, 7);
       background-color: rgba(87, 20, 20, 0.217);
-      color: white;
+      color:  rgb(107, 38, 38);;
       transform: scale(1.1, 1.1);
   }
+
+  /* this can be adgeistied */
+  @media screen and (max-width:1280px) {
+    .book-list {
+     display: block;
+    }
+  
+  }
+
+  /* 1280×800 */

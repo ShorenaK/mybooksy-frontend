@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 import { useParams, useNavigate} from "react-router-dom"
 import {Link} from 'react-router-dom' 
 import { BiLike } from "react-icons/bi"
+import '../styles/Bookinfo.css'
+import dateFormat from 'dateformat'
 
 export default function Bookinfo({user}) {
   const [likes, setLikes] = useState(null);
@@ -86,30 +88,28 @@ const handleSubmitUnlike = async (e) => {
   const loaded = () => (
    
   <div className="book">
-      <h1></h1>
       <h1>{book.title}</h1>
        <img src={book.image}  alt="book"/>
-       <h2>Author: {book.author}</h2>
-        <h3>Genre: {book.genre}</h3>
+       <h4>Author: {book.author}</h4>
+        <p>Genre: {book.genre}</p>
         <p>Page: {book.pages}</p>
         <p>{book.description}</p>
-        <p>Publication Date: {book.publishDate}</p>
-        <a href={book.link}>Links</a>
-        
+        <p>Publication Date: {dateFormat(book.publishDate, 'mmmm, dS, yyyy')}</p>
+        <a href={book.link} style={{color:'rgb(107, 38, 38)'}}>Links </a>
         {book.likes.includes(userInfo._id) ? 
         <form onSubmit={handleSubmitUnlike}>
           <p>{likes}</p>
-          <button type="submit"><BiLike size={20}/>Unlike</button>
+        <button type="submit"><BiLike size={20} style={{color:'rgb(107, 38, 38)'}}/>UnLike</button>
         </form>
         : 
         <form onSubmit={handleSubmitLike}>
           <p>{likes}</p>
-          <button type="submit"><BiLike size={20}/>Like</button>
+         <button type="submit"><BiLike size={20} style={{color:'rgb(107, 38, 38)'}}/>Like</button>
         </form>
         }
     <div> 
-        <Link to={`/books/${bookId}edit/`}><button>Edit book</button></Link>
-        <button className="delete" onClick={removeBook}>
+        <Link to={`/books/${bookId}edit/`}><button style={{color:'rgb(107, 38, 38)'}}>Edit book</button></Link>
+        <button className="delete" onClick={removeBook} style={{color:'rgb(107, 38, 38)'}}>
 									Remove Book
 				</button>
     </div>
