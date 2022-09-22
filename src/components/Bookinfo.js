@@ -107,12 +107,14 @@ const handleSubmitUnlike = async (e) => {
          <button type="submit"><BiLike size={20} style={{color:'rgb(107, 38, 38)'}}/>Like</button>
         </form>
         }
+    {user ?
     <div> 
         <Link to={`/books/${bookId}edit/`}><button style={{color:'rgb(107, 38, 38)'}}>Edit book</button></Link>
         <button className="delete" onClick={removeBook} style={{color:'rgb(107, 38, 38)'}}>
 									Remove Book
 				</button>
     </div>
+    : null }
 </div>
 )
 
