@@ -115,20 +115,13 @@ h4, p, a{
     /* margin-left: 100px; */
 }
 
-.book h2:first-of-type {
-    grid-area: name;
-}
-
-.book h2:last-of-type {
-    grid-area: label;
-}
-
   /* this can be adj */
   /* @media screen and (max-width:1280px) {
+  /* this can be adgeistied */
+  @media screen and (max-width:1240px) {
     .book-list {
      display: block;
-    }
-  
+    } 
   }
   @media screen and (max-width:1024px) {
     .book-list {
