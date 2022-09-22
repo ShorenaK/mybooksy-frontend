@@ -9,16 +9,17 @@ function EditReview(props) {
     const [editForm, setEditForm] = useState(null);
     const params = useParams()
     const reviewId = params.reviewId
-    const URL = BASE_URL + `reviews/${reviewId}`
+    const URL = BASE_URL + `reviews/review/${reviewId}`
 
     const getReview = async () => {
         const response = await fetch(URL)
-        const data = response.json()
+        const data = await response.json()
         setEditForm(data)
     }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        console.log(editForm)
         try {
             const output = JSON.stringify(editForm)
             const options = {
@@ -30,7 +31,8 @@ function EditReview(props) {
             }
             const response = await fetch(URL, options)
             const responseData = await response.json()
-            navigate(`/books`)
+            console.log(responseData)
+            navigate(-1)
         } catch (error) {
             console.log(error)
         }
@@ -38,35 +40,34 @@ function EditReview(props) {
 
     const handleChange = (e) => {
         const data = {...editForm, [e.target.name]: e.target.value}
+        console.log(data)
         setEditForm(data)
     }
 
     useEffect(() => {
         getReview()
-    })
+    }, [])
 
     return (
         <>
             {editForm ?
             <div className="add_review">
-            <h1>Edit Review</h1>
+            <h1>Edit Review ! </h1>
             <form onSubmit={handleSubmit}>
                 <label> 
                     Would you recommend this book:
                     <input type="radio" required name="recommend" onChange={handleChange} value={editForm.recommend = true} />
-                   <p>YES</p> 
+                   Yes
                  </label> 
                    <label>
                     <input type="radio" required name="recommend" onChange={handleChange} value={editForm.recommend = false} />
-                    <p>NO</p>
+                    No
                     </label>
                     <br></br>
                 <label>
-                    <p>Comment:</p>
-                    <input className="input_place" type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={editForm.comment}/>
+                Comment:   <input className="input_place" type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={editForm.comment}/>
                 </label>
-                <input className="submit" type="Submit" value="Submit Changes" />
-                <input className="delete" type="Submit" value="Submit Changes" />
+                <input className="delete" style={{ marginLeft: '2rem'}} type="Submit" value="Submit Changes" />
             </form>
             </div> : null}
         </>
