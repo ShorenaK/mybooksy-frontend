@@ -108,13 +108,8 @@ const handleSubmitUnlike = async (e) => {
         </form>
         }
     <div> 
-<<<<<<< HEAD
-        <Link to={`/books/${bookId}edit`}><button>Edit book</button></Link>
-        <button className="delete" onClick={removeBook}>
-=======
         <Link to={`/books/${bookId}edit/`}><button style={{color:'rgb(107, 38, 38)'}}>Edit book</button></Link>
         <button className="delete" onClick={removeBook} style={{color:'rgb(107, 38, 38)'}}>
->>>>>>> 15a1294a18a2418a58218dc32e0413a2a77889b9
 									Remove Book
 				</button>
     </div>

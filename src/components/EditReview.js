@@ -9,16 +9,17 @@ function EditReview(props) {
     const [editForm, setEditForm] = useState(null);
     const params = useParams()
     const reviewId = params.reviewId
-    const URL = BASE_URL + `reviews/${reviewId}`
+    const URL = BASE_URL + `reviews/review/${reviewId}`
 
     const getReview = async () => {
         const response = await fetch(URL)
-        const data = response.json()
+        const data = await response.json()
         setEditForm(data)
     }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        console.log(editForm)
         try {
             const output = JSON.stringify(editForm)
             const options = {
@@ -30,7 +31,8 @@ function EditReview(props) {
             }
             const response = await fetch(URL, options)
             const responseData = await response.json()
-            navigate(`/books`)
+            console.log(responseData)
+            navigate(-1)
         } catch (error) {
             console.log(error)
         }
@@ -38,12 +40,13 @@ function EditReview(props) {
 
     const handleChange = (e) => {
         const data = {...editForm, [e.target.name]: e.target.value}
+        console.log(data)
         setEditForm(data)
     }
 
     useEffect(() => {
         getReview()
-    })
+    }, [])
 
     return (
         <>
@@ -53,11 +56,11 @@ function EditReview(props) {
             <form onSubmit={handleSubmit}>
                 <label> 
                     Would you recommend this book:
-                    <input type="radio" required name="recommend" onChange={handleChange} value={editForm.recommend = true} />
+                    <input type="radio" required name="recommend" onChange={handleChange} value={true} />
                    <p>YES</p> 
                  </label> 
                    <label>
-                    <input type="radio" required name="recommend" onChange={handleChange} value={editForm.recommend = false} />
+                    <input type="radio" required name="recommend" onChange={handleChange} value={false} />
                     <p>NO</p>
                     </label>
                     <br></br>
@@ -65,7 +68,7 @@ function EditReview(props) {
                     <p>Comment:</p>
                     <input className="input_place" type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={editForm.comment}/>
                 </label>
-                <input clasName="submit" type="Submit" value="Submit Changes" />
+                <input className="submit" type="Submit" value="Submit Changes" />
             </form>
             </div> : null}
         </>
