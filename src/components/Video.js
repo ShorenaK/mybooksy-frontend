@@ -12,7 +12,7 @@ export default function Video() {
 
     <div className='content'>
       <h1>
-      <Link to="/books" className='btn'> <p className="image"> <img  src="https://i.imgur.com/K6cdwpG.png" alt="logo" /> </p> </Link>
+      <Link to="/books" className='btn'> <img  src="https://i.imgur.com/K6cdwpG.png" alt="logo" /> </Link>
     </h1>
     </div>
     </div>
