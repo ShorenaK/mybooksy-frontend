@@ -27,10 +27,9 @@ import { getUserToken } from '../utils/authToken'
   //   lastScrollY = window.scrollY;
   // });
 
-function Navbar({handleLogout, user, getUser}) {
+function Navbar({handleLogout, user}) {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
-    const getUser = getUser
 
   return (
     <header className='header'>

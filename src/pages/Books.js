@@ -35,7 +35,7 @@ const loaded = ()=>{
            <p>Genre: {book.genre}</p>
            <p>Page: {book.pages}</p>
            <p>Publication Date:  {dateFormat(book.publishDate, 'mmmm, dS, yyyy')}</p>
-           <p>Likes: {book.likes}</p>
+           <p>Likes: {book.likes.length}</p>
         </div>
         )})
         } </> )}
