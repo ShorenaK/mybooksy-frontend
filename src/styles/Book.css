@@ -6,7 +6,8 @@
     margin-right: 30px;
     display: grid;
     /* grid-template-columns: repeat(4,1fr); */
-    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* grid-template-columns: auto, auto, auto, auto; */
     gap: 60px;
     /* width: 200px; */
   }
@@ -58,11 +59,11 @@
           "link"
           "label"
   }  */
-  .book{
+  /* .book{
      border: 1px solid rgba(87, 20, 20, 0.217); 
      border-radius: 20px;
-  }
-  .book>h1 {
+  } */
+  /* .book>h1 {
       grid-area: title;
   }
   
@@ -71,11 +72,11 @@
       width: auto;
       height: 50vh;
       /* margin-left: 100px; */
-  }
+  /* } */
   
   .book h2:first-of-type {
       grid-area: name;
-  }
+  } */
   
   .book h2:last-of-type {
       grid-area: label;
@@ -104,16 +105,24 @@ h4, p, a{
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
-.book>h1 {
+/* .book>h1 {
     grid-area: title;
-}
+} */
 
-.book>img {
+/* .book>img {
     grid-area: image;
     width: auto;
     height: 50vh;
     /* margin-left: 100px; */
+/* } */
+/* 
+.book h2:first-of-type {
+    grid-area: name;
 }
+
+.book h2:last-of-type {
+    grid-area: label;
+} */ 
 
   /* this can be adj */
   /* @media screen and (max-width:1280px) {
@@ -163,7 +172,11 @@ h4, p, a{
     .book-card {
       display: block;
     }
+<<<<<<< HEAD
   }
+=======
+  } 
+>>>>>>> 89d7322a8f93021f818c5c8e6fde726904a10938
 
 
   /* 1280×800 */
