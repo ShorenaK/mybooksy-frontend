@@ -5,7 +5,7 @@ import Main from './components/Main';
 import {getUserToken, setUserToken, clearUserToken} from "./utils/authToken"
 import { useEffect, useState } from "react";
 import decode from "jwt-decode"
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 
 function App() {
 
@@ -89,7 +89,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar user={currentUser} handleLogout={logoutUser}/>
+      <Header user={currentUser} handleLogout={logoutUser}/>
       <Main 
         getUser={getUser} 
         currentUser={currentUser}

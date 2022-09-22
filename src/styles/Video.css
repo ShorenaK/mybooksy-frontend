@@ -43,3 +43,7 @@
          margin-bottom: 1.6rem;
      }
  }
+ .image{
+    max-width: 100%;
+    height: auto;
+ }
