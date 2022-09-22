@@ -1,0 +1,179 @@
+.header{
+    transition: top 0.3s;
+    /* position: fixed;  */
+    background-color: var(--mainColor);
+    width: 100%;
+    height: var(--nav-height);
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 10;
+    --nav-height: 50px;
+    /* padding-top: var(--nav-height)  */
+}
+
+.nav--hidden {
+  transform: translateY(calc(-1 * var(--nav-height)));
+  box-shadow: none;
+}
+
+.nav-menu{
+    display: flex;
+}
+
+.nav-menu li {
+   padding: 0 1rem;
+}
+:root{
+  --mainColor: rgba(87, 20, 20, 0.217);
+  --mainColorLight: rgba(97, 44, 44, 0.264);
+  --secondaryColor: 	rgba(153, 101, 21); 
+  --textColor: #eee;
+}
+.nav-menu a{
+  margin: 0 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.hamburger{
+    display: none;
+}
+/* button  */
+/* header .nav-btn {
+   padding: 5px;
+   cursor: pointer;
+   background: transparent;
+   border: none;
+   outline: none;
+   color: var(--mainColorLight);
+   visibility: hidden;   // visible;
+   opacity: 0;  // 1 ;
+} */
+@media screen and (max-width:1024px) {
+   /* .hamburger {
+    display: block;
+   }
+   .nav-menu{
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    left:-100%;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    transition: 0.3s;
+    z-index: -1;
+    background: rgba(87, 20, 20, 0.217) 0px 10px 20px -10px;
+   
+   }
+   .nav-menu.active{
+    left:0;
+   }
+   .nav-menu li{
+     padding: 1rem 0;
+   }
+   .nav-menu a {
+     font-size: 2rem;
+   }
+
+header {
+  position: fixed;
+   width: 100%; 
+   top: 0;
+  left: 0;
+  background-color: var(--mainColor);
+  color: white;
+  font-family: 'Exo 2', sans-serif; 
+  padding: none;
+  transition: top 0.3s;
+} */
+}
+/* 
+@media screen and (max-width:900px) {
+  .hamburger {
+   display: block;
+  }
+  .nav-menu{
+   position: absolute;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   top:0;
+   left:-100%;
+   text-align: center;
+   width: 100%;
+   height: 100vh;
+   transition: 0.3s;
+   z-index: -1;
+   background: rgba(87, 20, 20, 0.217) ;
+  
+  }
+  .nav-menu.active{
+   left:0;
+  }
+  .nav-menu li{
+    padding: 1rem 0;
+  }
+  .nav-menu a {
+    font-size: 2rem;
+  }
+
+header {
+ position: fixed;
+  width: 100%; 
+  top: 0;
+ left: 0;
+ background-color: var(--mainColor);
+ color: white;
+ font-family: 'Exo 2', sans-serif; 
+ padding: none;
+ transition: top 0.3s;
+}
+} */
+/* 
+
+@media screen and (max-width:760px) {
+  .hamburger {
+   display: block;
+  }
+  .nav-menu{
+   position: absolute;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   top:0;
+   left:-100%;
+   text-align: center;
+   width: 100%;
+   height: 100vh;
+   transition: 0.3s;
+   z-index: -1;
+   background: rgba(87, 20, 20, 0.217) 0px 10px 20px -10px;
+  
+  }
+  .nav-menu.active{
+   left:0;
+  }
+  .nav-menu li{
+    padding: 1rem 0;
+  }
+  .nav-menu a {
+    font-size: 2rem;
+  }
+
+header {
+ position: fixed;
+  width: 100%; 
+  top: 0;
+ left: 0;
+ background-color: var(--mainColor);
+ color: white;
+ font-family: 'Exo 2', sans-serif; 
+ padding: none;
+ transition: top 0.3s;
+}
+} */

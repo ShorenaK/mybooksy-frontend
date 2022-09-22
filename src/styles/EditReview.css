@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+ 
+form label {
+    margin-bottom: 9rem;
+
+} 
+
+
+ form input {
+    margin-bottom: 5rem;
+    padding: 10px 18px;
+    font-size: 1.2 rem;
+    font-family: 'oitfit, sans-serif';
+    background:  rgba(87, 20, 20, 0.217);
+    border-color: rgb(136, 7, 7);
+    color: rgb(136, 7, 7);
+    height: 50px;
+    font-size:15pt;
+}
+
+label{
+    color:  rgb(107, 38, 38);
+}
+input[type='radio'] { 
+    transform: scale(1.5); 
+}
+input[type=radio]:checked {
+    background-color: #ffa;
+} 
+
+.add_review{
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+}
+
+
+/* 
+.submit:hover{
+   background: rgba(87, 20, 20, 0.217);
+}
+.submit{
+    background: rgba(87, 20, 20, 0.217);
+}
+.submit{
+    padding: 12px 32px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+  } */

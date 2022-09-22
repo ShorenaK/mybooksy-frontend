@@ -1,7 +1,24 @@
-// delete and update page 
+// Delete and update page 
 
-export const Show = () => {
+import Reviews from "../pages/Reviews";
+
+import Bookinfo from "../components/Bookinfo"
+
+export const Show = ({user}) => {
+  
   return (
-    <div>Show</div>
+
+    <div>
+      <div> 
+        <Bookinfo user={user}/> 
+      </div>
+      <div>
+        <Reviews user={user}/> 
+      </div>
+    </div>
+
+    
   )
 }
+
+export default Show
