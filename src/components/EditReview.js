@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import '../styles/EditReview.css'
 
 const BASE_URL = "https://mybooksy-project.herokuapp.com/";
 
@@ -47,26 +48,26 @@ function EditReview(props) {
     return (
         <>
             {editForm ?
-            <>
+            <div className="add_review">
             <h1>Edit Review</h1>
             <form onSubmit={handleSubmit}>
-                <label>
+                <label> 
                     Would you recommend this book:
                     <input type="radio" required name="recommend" onChange={handleChange} value={editForm.recommend = true} />
-                    Yes
-                </label>
-                <label>
+                   <p>YES</p> 
+                 </label> 
+                   <label>
                     <input type="radio" required name="recommend" onChange={handleChange} value={editForm.recommend = false} />
-                    No
-                </label>
-                <br></br>
+                    <p>NO</p>
+                    </label>
+                    <br></br>
                 <label>
-                    Comment:
-                    <input type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={editForm.comment} />
+                    <p>Comment:</p>
+                    <input className="input_place" type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={editForm.comment}/>
                 </label>
-                <input type="Submit" value="Submit Changes" />
+                <input clasName="submit" type="Submit" value="Submit Changes" />
             </form>
-            </> : null}
+            </div> : null}
         </>
     )
 }
