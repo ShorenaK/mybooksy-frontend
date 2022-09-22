@@ -11,11 +11,11 @@ h1 {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    font-size: 30px;
-    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    /* font-family: 'Work Sans', sans-serif; */
 }
 
-button {
+/* button {
   padding-inline: 58px;
   margin-top: 20px;
   background-color: rgb(127, 253, 127);
@@ -24,14 +24,14 @@ button {
 
 button:hover {
     background-color: rgb(200, 254, 129);
-}
+} */
 
-
+/* 
 input {
 align-items: center;
 margin: auto;
 display: block;
 padding: 10px;
-}
+} */
 
 

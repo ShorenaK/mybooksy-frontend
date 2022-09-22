@@ -11,7 +11,7 @@
     padding: 1rem;
     z-index: 10;
     --nav-height: 50px;
-    padding-top: var(--nav-height) 
+    /* padding-top: var(--nav-height)  */
 }
 
 .nav--hidden {
@@ -51,8 +51,8 @@
    visibility: hidden;   // visible;
    opacity: 0;  // 1 ;
 } */
-@media screen and (max-width:1240px) {
-   .hamburger {
+@media screen and (max-width:1024px) {
+   /* .hamburger {
     display: block;
    }
    .nav-menu{
@@ -79,19 +79,101 @@
    .nav-menu a {
      font-size: 2rem;
    }
-}
+
 header {
-  /* position: fixed;  */
+  position: fixed;
    width: 100%; 
    top: 0;
   left: 0;
   background-color: var(--mainColor);
   color: white;
   font-family: 'Exo 2', sans-serif; 
-  padding: 2em;
+  padding: none;
   transition: top 0.3s;
+} */
 }
+/* 
+@media screen and (max-width:900px) {
+  .hamburger {
+   display: block;
+  }
+  .nav-menu{
+   position: absolute;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   top:0;
+   left:-100%;
+   text-align: center;
+   width: 100%;
+   height: 100vh;
+   transition: 0.3s;
+   z-index: -1;
+   background: rgba(87, 20, 20, 0.217) ;
+  
+  }
+  .nav-menu.active{
+   left:0;
+  }
+  .nav-menu li{
+    padding: 1rem 0;
+  }
+  .nav-menu a {
+    font-size: 2rem;
+  }
 
-/* header .nav-btn {
+header {
+ position: fixed;
+  width: 100%; 
+  top: 0;
+ left: 0;
+ background-color: var(--mainColor);
+ color: white;
+ font-family: 'Exo 2', sans-serif; 
+ padding: none;
+ transition: top 0.3s;
+}
+} */
+/* 
 
+@media screen and (max-width:760px) {
+  .hamburger {
+   display: block;
+  }
+  .nav-menu{
+   position: absolute;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   top:0;
+   left:-100%;
+   text-align: center;
+   width: 100%;
+   height: 100vh;
+   transition: 0.3s;
+   z-index: -1;
+   background: rgba(87, 20, 20, 0.217) 0px 10px 20px -10px;
+  
+  }
+  .nav-menu.active{
+   left:0;
+  }
+  .nav-menu li{
+    padding: 1rem 0;
+  }
+  .nav-menu a {
+    font-size: 2rem;
+  }
+
+header {
+ position: fixed;
+  width: 100%; 
+  top: 0;
+ left: 0;
+ background-color: var(--mainColor);
+ color: white;
+ font-family: 'Exo 2', sans-serif; 
+ padding: none;
+ transition: top 0.3s;
+}
 } */
