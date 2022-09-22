@@ -5,7 +5,7 @@ import Video from './Video';
 export default function Home() {
   return (
     <div>
-     {/* <Navbar />   */}
+      {/* <Navbar />    */}
       <Video />
       </div>
   )
