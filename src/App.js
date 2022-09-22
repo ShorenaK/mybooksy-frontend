@@ -3,7 +3,7 @@ import './styles/App.css';
 import Footer from "./components/Footer"
 import Main from './components/Main';
 import {getUserToken, setUserToken, clearUserToken} from "./utils/authToken"
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import decode from "jwt-decode"
 import Navbar from './components/Navbar';
 
@@ -89,14 +89,14 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar user={currentUser} handleLogout={logoutUser}/>
+      <Navbar user={currentUser} handleLogout={logoutUser}  />
       <Main 
         getUser={getUser} 
-        currentUser={currentUser}
+        user={currentUser}
         isAuthenticated={isAuthenticated}
+        handleLogout={logoutUser}
         handleLogin={loginUser}
         handleSignup={registerUser}
-        handleLogout={logoutUser}
       />
       <Footer /> 
     </div>
