@@ -1,5 +1,6 @@
 import "../styles/BookForm.css"
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const BASE_URL = process.env.REACT_APP_URL || "http://localhost:4000/";
 
@@ -13,6 +14,7 @@ const getBooks = async (fn) => {
     }
 }
 function BookForm(props) {
+    const navigate = useNavigate()
 
     const initForm = {
         title: '',
@@ -30,6 +32,7 @@ function BookForm(props) {
 
 
     const handleSubmit = async (e) => {
+        e.preventDefault()
         try {
             const newBook = { ...bookForm }
             const output = JSON.stringify(newBook)
@@ -44,6 +47,7 @@ function BookForm(props) {
             const response = await fetch(URL, options)
             const responseData = await response.json()
             setBookForm(initForm)
+            navigate('/books')
 
         } catch (error) {
             console.log(error)
@@ -92,7 +96,7 @@ function BookForm(props) {
                     Date of Publication: 
                     <input type="date" required name="publishDate" onChange={handleChange} value={bookForm.publishDate} />
                 </label>
-                <button name="Submit" id="button" value="Add Book">Add Book</button>
+                <button size={80}  style={{color:'rgb(107, 38, 38)', marginBottom: '10rem'}} className="delete" name="Submit" id="button" value="Add Book">Add Book</button>
                 </div>
             </form>
         </>

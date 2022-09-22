@@ -13,7 +13,7 @@ export const Show = ({user}) => {
         <Bookinfo user={user}/> 
       </div>
       <div>
-        <Reviews /> 
+        <Reviews user={user}/> 
       </div>
     </div>
 
