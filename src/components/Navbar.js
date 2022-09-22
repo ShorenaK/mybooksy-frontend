@@ -53,7 +53,7 @@ function Navbar({handleLogout, user}) {
           </li>
         </>
         }
-        { user ?
+        { user && user.isAdmin ? 
         <li>
             <Link to="/books/add">Add Book</Link>
         </li>
