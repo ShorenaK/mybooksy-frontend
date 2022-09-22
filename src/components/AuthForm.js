@@ -24,26 +24,29 @@ function AuthForm({signal, ...userLogin}) {
     }
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
+            <h1>Log in page !</h1>
+            <br></br>
             <label>
-                Username
-                <input 
+               
+            Username:  <input 
                     type="text"
                     name="username"
                     onChange={handleChange}
                     value={userInput.username}
                 />
             </label>
-            <label>
-                Password
-                <input
+              <br></br>
+            <label> 
+            Password:   <input
                     type="password"
                     name="password"
                     onChange={handleChange}
                     value={userInput.password}
                 />
             </label>
-            <input type="submit" value={login ? "Login" : "Signup"}/>
+            <br></br>
+            <input className="delete" style={{ marginLeft: '8rem', marginTop: '3rem', borderRadius: 10 + 'px'}} type="submit" value={login ? "Login" : "Signup"}/>
         </form>
     )
 }
