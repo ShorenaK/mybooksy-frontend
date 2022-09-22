@@ -74,7 +74,7 @@ const handleSubmit = async (e) => {
             <button type="submit"><BiLike size={20}/>Like</button>
            </form>
     <div> 
-        <Link to={`/books/${bookId}edit/`}><button>Edit book</button></Link>
+        <Link to={`/books/${bookId}edit`}><button>Edit book</button></Link>
         <button className="delete" onClick={removeBook}>
 									Remove Book
 				</button>
