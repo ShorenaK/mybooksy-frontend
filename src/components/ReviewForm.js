@@ -43,20 +43,19 @@ function ReviewForm(props) {
 
     return (
         <div className="form">
-            <h1>Write a new review!</h1>
+            <h1>Write a new review !</h1>
             <form onSubmit={handleSubmit}>
                 <label>Would you recommend this book:  
                 <input className="radio" type="radio" required name="recommend" onChange={handleChange} value={true} /> 
                Yes
-                    <input className="radio" type="radio" required name="recommend" onChange={handleChange} value={false} />  
+                <input className="radio" type="radio" required name="recommend" onChange={handleChange} value={false} />  
                 No
                 </label>
                 <br></br>
                 <label>
-                   
                 Comment:   <input type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={reviewForm.comment} />
                 </label>
-                <input className="delete" style={{ marginLeft: '2rem'}}type='Submit' value="Add Review" />
+                <input className="delete" style={{ marginLeft: '2rem'}} type='Submit' value="Add Review" />
             </form>
         </div>
     )
