@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-const BASE_URL = process.env.REACT_APP_URL || "http://localhost:4000/";
+const BASE_URL =  "https://mybooksy-project.herokuapp.com/";
 
 // const getBooks = async (fn) => {
 //     try{
