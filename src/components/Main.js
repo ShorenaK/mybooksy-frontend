@@ -9,7 +9,7 @@ import Home from "./Home";
 import AuthForm from "./AuthForm";
 
 
-function Main({currentUser, getUser, handleLogin, handleSignup, isAuthenticated}) {
+function Main({currentUser, getUser, handleLogin, handleSignup, isAuthenticated, user}) {
  
     return ( 
        <>
@@ -17,7 +17,7 @@ function Main({currentUser, getUser, handleLogin, handleSignup, isAuthenticated}
        <Routes>
        <Route exact path="/" element={<Home/>}/>
        <Route exact path="/books" element={<Books />} />  
-        <Route exact path="/books/:bookId" element={<Show />}/> 
+        <Route exact path="/books/:bookId" element={<Show user={user}/>}/> 
         <Route exact path="/books/add" element={<BookForm />}/>
         <Route exact path="/reviews/:bookId/add" element={<ReviewForm />} />
         <Route exact path="/reviews/:reviewId/edit" element={<EditReview />} />

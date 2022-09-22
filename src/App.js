@@ -92,7 +92,7 @@ function App() {
       <Navbar user={currentUser} handleLogout={logoutUser}  />
       <Main 
         getUser={getUser} 
-        currentUser={currentUser}
+        user={currentUser}
         isAuthenticated={isAuthenticated}
         handleLogout={logoutUser}
         handleLogin={loginUser}
