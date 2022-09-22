@@ -10,7 +10,7 @@ import Navbar from './components/Navbar';
 
 function App() {
 
-  const URL = process.env.REACT_APP_URL || "http://localhost:4000/";
+  const URL = "https://mybooksy-project.herokuapp.com/" || "http://localhost:4000/";
   const [currentUser, setCurrentUser] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
