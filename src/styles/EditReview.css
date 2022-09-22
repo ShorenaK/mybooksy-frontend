@@ -36,18 +36,3 @@ input[type=radio]:checked {
 }
 
 
-/* 
-.submit:hover{
-   background: rgba(87, 20, 20, 0.217);
-}
-.submit{
-    background: rgba(87, 20, 20, 0.217);
-}
-.submit{
-    padding: 12px 32px;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    background: transparent;
-    color: white;
-    cursor: pointer;
-  } */

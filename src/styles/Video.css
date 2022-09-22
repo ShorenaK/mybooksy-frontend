@@ -1,17 +1,10 @@
 #video {
-     /* position: fixed;    */
      width: 100%;
      height: 100%;
      object-fit: cover;
      z-index: -1;
  }
- /* #video {s
-     position: fixed;
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     z-index: -1;
- } */
+
  .hero{
      height: 100vh;
      width: 100%;
@@ -24,12 +17,8 @@
      width: 100%;
      height: 100%;
      top:40vh;
-     /* padding: 20px; */
  }
- /* .hero .content h1{
-     font-size: 4rem;
-     color: #D4AF37;;
- } */
+ 
  .hero .btn{
      font-size: 3rem;
      font-weight: 400;
