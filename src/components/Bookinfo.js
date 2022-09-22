@@ -96,7 +96,7 @@ const handleSubmitUnlike = async (e) => {
         <p>{book.description}</p>
         <p>Publication Date: {dateFormat(book.publishDate, 'mmmm, dS, yyyy')}</p>
         <a href={book.link} style={{color:'rgb(107, 38, 38)'}}>Links </a>
-        {book.likes.includes(userInfo._id) ? 
+        {userInfo && book.likes.includes(userInfo._id) ? 
         <form onSubmit={handleSubmitUnlike}>
           <p>{likes}</p>
         <button type="submit"><BiLike size={20} style={{color:'rgb(107, 38, 38)'}}/>UnLike</button>
