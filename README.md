@@ -8,10 +8,11 @@ You can also post your own book and add you affiliate link for extra exposure wi
 ![alt text](https://i.imgur.com/42y9ZBJ.png)
 
 ## Preview
-
+![alt text](https://i.imgur.com/4vMrgVf.jpg)
+![alt text](https://i.imgur.com/5eBtxUM.png)
 
 ## Go to app
-Click on this link ==>
+[CLICK HERE!](https://632ced9a3f7f701d64bf1dcf--cheery-twilight-75bceb.netlify.app/)
 
 ## Technologies Implemented
 React, MongoDB, Express, Node, CSS
