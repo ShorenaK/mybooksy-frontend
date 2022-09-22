@@ -1,7 +1,8 @@
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import '../styles/Navbar.css';
 import {Link} from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
+import { getUserToken } from '../utils/authToken'
 
 // window.onscroll = function() {scrollFunction()};
 // function scrollFunction() {
@@ -26,9 +27,13 @@ import {FaBars, FaTimes} from 'react-icons/fa'
   //   lastScrollY = window.scrollY;
   // });
 
-function Navbar({handleLogout, user}) {
+function Navbar({handleLogout, user, getUser}) {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
+
+    useEffect(()=>{
+      getUser()
+    }, [])
 
   return (
     <header className='header'>

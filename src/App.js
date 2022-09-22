@@ -89,7 +89,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar user={currentUser} handleLogout={logoutUser}  />
+      <Navbar user={currentUser} handleLogout={logoutUser} getUser={getUser} />
       <Main 
         getUser={getUser} 
         user={currentUser}
