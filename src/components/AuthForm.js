@@ -1,6 +1,27 @@
-function AuthForm(props) {
+import {useState} from 'react'
+import {useNavigate} from 'react-router-dom'
+
+function AuthForm({signal, ...userLogin}) {
+    const user = {...userLogin}
+    const {login} = user
     
+    const navigate = useNavigate()
     const [userInput, setUserInput] = useState({username: '', password: ''})
+
+    const handleChange = async (e) => {
+        setUserInput({ ...userInput, [e.target.name]: e.target.value })
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        try {
+            const authResponse = await signal(userInput)
+            navigate('/', {replace: true})
+        }catch(error){
+            console.log(error)
+            navigate('/login', {replace: true})
+        }
+    }
 
     return(
         <form onSubmit={handleSubmit}>
@@ -26,3 +47,5 @@ function AuthForm(props) {
         </form>
     )
 }
+
+export default AuthForm
