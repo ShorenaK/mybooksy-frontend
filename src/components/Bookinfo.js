@@ -96,23 +96,26 @@ const handleSubmitUnlike = async (e) => {
         <p>{book.description}</p>
         <p>Publication Date: {dateFormat(book.publishDate, 'mmmm, dS, yyyy')}</p>
         <a href={book.link} style={{color:'rgb(107, 38, 38)'}}>Links </a>
-        {book.likes.includes(userInfo._id) ? 
+        <p>Likes: {likes}</p>
+        {userInfo && book.likes.includes(userInfo._id) ? 
         <form onSubmit={handleSubmitUnlike}>
           <p>{likes}</p>
-        <button type="submit"><BiLike size={20} style={{color:'rgb(107, 38, 38)'}}/>UnLike</button>
+        <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}><BiLike style={{color:'rgb(107, 38, 38)'}}/>   UnLike </button>
         </form>
-        : 
+        : user ?
         <form onSubmit={handleSubmitLike}>
           <p>{likes}</p>
-         <button type="submit"><BiLike size={20} style={{color:'rgb(107, 38, 38)'}}/>Like</button>
+         <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}><BiLike style={{color:'rgb(107, 38, 38)'}}/>     Like </button>
         </form>
-        }
+        : null}
+    {user && user.isAdmin ?
     <div> 
-        <Link to={`/books/${bookId}edit/`}><button style={{color:'rgb(107, 38, 38)'}}>Edit book</button></Link>
+        <Link to={`/books/${bookId}edit/`}><button className="delete" style={{color:'rgb(107, 38, 38)', marginBottom:'0.5rem', marginLeft:'0.5rem',marginRight:'0.5rem',marginTop:'0.5rem'}}>Edit book</button></Link>
         <button className="delete" onClick={removeBook} style={{color:'rgb(107, 38, 38)'}}>
 									Remove Book
 				</button>
     </div>
+    : null }
 </div>
 )
 
@@ -125,3 +128,5 @@ const loading = () => {
      </div>
   )
 }
+
+// button size={30} style={{color:'#ffffff', marginRight: '2rem'}}</button>

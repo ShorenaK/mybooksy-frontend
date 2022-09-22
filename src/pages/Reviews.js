@@ -3,8 +3,7 @@ import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom'
 import {BsFillEmojiSmileFill, BsFillEmojiExpressionlessFill} from 'react-icons/bs'
 
-function Reviews(){
-
+function Reviews({user}){
     const [variable, setVariable] = useState([]);
     const params = useParams();
     const bookId = `${params.bookId}/`
@@ -19,32 +18,44 @@ function Reviews(){
     })
     return (
       <div>
-        <div>Reviews:</div>
-        <Link to={`/reviews/${bookId}add/`}><button>Add Review</button></Link>
+        <h4>Reviews:</h4>
+        { user ?
+         <Link to={`/reviews/${bookId}add/`}><button className='delete'>Add Review</button></Link>
+        : null }
         {variable.map((review, idx) => {
           if (review.recommend == true) {
           return (
             <div className='review-wrapper'>
               <p>{review.comment}</p>
               <h1><BsFillEmojiSmileFill /></h1>
-              <Link to={`/reviews/${review._id}/edit/`}><button>Edit Review</button></Link>
+              {user ?
+              <>
+            <Link to={`/reviews/${review._id}/edit/`}><button className='delete'>Edit Review</button></Link>
               <button className="delete" onClick={async ()=> {
                 const options = {method: 'DELETE'}
                 const response = await fetch(`https://mybooksy-project.herokuapp.com/reviews/${review._id}`, options)
                 const deletedReview = await response.json()
               }}>Remove Review</button>
+              </>
+              : null }
             </div>
           )} else {
             return(
             <div className='review-wrapper'>
               <p>{review.comment}</p>
               <h1><BsFillEmojiExpressionlessFill /></h1>
-              <Link to={`/reviews/${review._id}/edit/`}><button>Edit Review</button></Link>
+
+              {user ?
+              <>
+              <Link to={`/reviews/${review._id}/edit/`}><button className='delete'>Edit Review</button></Link>
+              
               <button className="delete" onClick={async ()=> {
                 const options = {method: 'DELETE'}
                 const response = await fetch(`https://mybooksy-project.herokuapp.com/reviews/${review._id}`, options)
                 const deletedReview = await response.json()
               }}>Remove Review</button>
+              </>
+              : null }
             </div>
         )}
         })}
