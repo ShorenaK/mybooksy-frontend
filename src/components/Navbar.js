@@ -1,32 +1,9 @@
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import '../styles/Navbar.css';
 import {Link} from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
 
-// window.onscroll = function() {scrollFunction()};
-// function scrollFunction() {
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     document.querySelector(".header").style.top = "0";
-//   } else {
-//     document.querySelector(".header").style.top = "-50px";
-//   }
-// }
-
-
-  // const nav = document.querySelector(".header");
-  // let lastScrollY = window.scrollY;
-
-  // window.addEventListener("scroll", () => {
-  //   if (lastScrollY < window.scrollY) {
-  //     nav.classList.add("nav--hidden");
-  //   } else {
-  //     nav.classList.remove("nav--hidden");
-  //   }
-
-  //   lastScrollY = window.scrollY;
-  // });
-
-function Navbar({handleLogout, user}) {
+function Navbar({handleLogout, user, isAuthenticated}) {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
 
