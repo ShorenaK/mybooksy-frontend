@@ -27,8 +27,6 @@ function BookForm(props) {
 
     const [bookForm, setBookForm] = useState(initForm);
 
-
-
     const handleSubmit = async (e) => {
         try {
             const newBook = { ...bookForm }

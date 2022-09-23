@@ -2,6 +2,7 @@ import {useParams} from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom'
 import {BsFillEmojiSmileFill, BsFillEmojiExpressionlessFill} from 'react-icons/bs'
+import '../styles/Bookinfo.css'
 
 function Reviews(){
 
@@ -18,7 +19,7 @@ function Reviews(){
         })
     })
     return (
-      <div>
+      <div className='book-reviews'>
              <h4>   Reviews:</h4>
         <Link to={`/reviews/${bookId}add/`}><button className='delete' style={{color:'rgb(107, 38, 38)', marginBottom:'2rem', marginLeft:'0.5rem',marginRight:'0.5rem',marginTop:'0.5rem'}}>Add Review</button></Link>
         {variable.map((review, idx) => {
@@ -44,7 +45,7 @@ function Reviews(){
                 const options = {method: 'DELETE'}
                 const response = await fetch(`https://mybooksy-project.herokuapp.com/reviews/${review._id}`, options)
                 const deletedReview = await response.json()
-              }}>Remove Review</button>
+              }} style={{color:'rgb(107, 38, 38)'}}>Remove Review</button>
             </div>
         )}
         })}

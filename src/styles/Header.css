@@ -1,6 +1,5 @@
 .header{
     transition: top 0.3s;
-    /* position: fixed; */
     background-color: var(--mainColor);
     width: 100%;
     height: var(--nav-height);
@@ -40,17 +39,7 @@
 .hamburger{
     display: none;
 }
-/* button  */
-/* header .nav-btn {
-   padding: 5px;
-   cursor: pointer;
-   background: transparent;
-   border: none;
-   outline: none;
-   color: var(--mainColorLight);
-   visibility: hidden;   // visible;
-   opacity: 0;  // 1 ;
-} */
+
 @media screen and (max-width:1240px) {
    .hamburger {
     display: block;
@@ -81,7 +70,7 @@
    }
 }
 header {
-  /* position: fixed;  */
+
    width: 100%; 
    top: 0;
   left: 0;
@@ -92,6 +81,3 @@ header {
   transition: top 0.3s;
 }
 
-/* header .nav-btn {
-
-} */

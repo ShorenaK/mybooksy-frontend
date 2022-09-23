@@ -25,7 +25,7 @@ export default function Bookinfo({user}) {
     }
   }
 console.log(`current book ${JSON.stringify(book)}`)
-// Delete 
+
 const removeBook = async () => {
   try {
       const options = { method: 'DELETE' }
@@ -87,7 +87,7 @@ const handleSubmitUnlike = async (e) => {
 
   const loaded = () => (
    
-  <div className="book">
+  <div className="book-perbook" >
       <h1>{book.title}</h1>
        <img src={book.image}  alt="book"/>
        <h4>Author: {book.author}</h4>
@@ -125,5 +125,3 @@ const loading = () => {
      </div>
   )
 }
-
-// button size={30} style={{color:'#ffffff', marginRight: '2rem'}}</button>

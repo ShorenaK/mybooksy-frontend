@@ -32,3 +32,6 @@ h4, p, a{
     grid-area: label;
 }
 
+.book-reviews{
+    margin-left: 620px;
+}

@@ -1,5 +1,3 @@
-
-// IMPORT COMPONENTS
 import Footer from "./components/Footer"
 import Main from './components/Main';
 import {getUserToken, setUserToken, clearUserToken} from "./utils/authToken"

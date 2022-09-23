@@ -1,6 +1,5 @@
 .header{
     transition: top 0.3s;
-    /* position: fixed;  */
     background-color: var(--mainColor);
     width: 100%;
     height: var(--nav-height);
@@ -11,9 +10,7 @@
     padding: 1rem;
     z-index: 10;
     --nav-height: 50px;
-    /* padding-top: var(--nav-height)  */
 }
-
 .nav--hidden {
   transform: translateY(calc(-1 * var(--nav-height)));
   box-shadow: none;
@@ -40,19 +37,8 @@
 .hamburger{
     display: none;
 }
-/* button  */
-/* header .nav-btn {
-   padding: 5px;
-   cursor: pointer;
-   background: transparent;
-   border: none;
-   outline: none;
-   color: var(--mainColorLight);
-   visibility: hidden;   // visible;
-   opacity: 0;  // 1 ;
-} */
 @media screen and (max-width:1024px) {
-   /* .hamburger {
+   .hamburger {
     display: block;
    }
    .nav-menu{
@@ -90,9 +76,9 @@ header {
   font-family: 'Exo 2', sans-serif; 
   padding: none;
   transition: top 0.3s;
-} */
+} 
 }
-/* 
+ 
 @media screen and (max-width:900px) {
   .hamburger {
    display: block;
@@ -133,8 +119,7 @@ header {
  padding: none;
  transition: top 0.3s;
 }
-} */
-/* 
+} 
 
 @media screen and (max-width:760px) {
   .hamburger {
@@ -164,16 +149,4 @@ header {
   .nav-menu a {
     font-size: 2rem;
   }
-
-header {
- position: fixed;
-  width: 100%; 
-  top: 0;
- left: 0;
- background-color: var(--mainColor);
- color: white;
- font-family: 'Exo 2', sans-serif; 
- padding: none;
- transition: top 0.3s;
 }
-} */

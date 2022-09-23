@@ -3,29 +3,6 @@ import '../styles/Navbar.css';
 import {Link} from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
 
-// window.onscroll = function() {scrollFunction()};
-// function scrollFunction() {
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     document.querySelector(".header").style.top = "0";
-//   } else {
-//     document.querySelector(".header").style.top = "-50px";
-//   }
-// }
-
-
-  // const nav = document.querySelector(".header");
-  // let lastScrollY = window.scrollY;
-
-  // window.addEventListener("scroll", () => {
-  //   if (lastScrollY < window.scrollY) {
-  //     nav.classList.add("nav--hidden");
-  //   } else {
-  //     nav.classList.remove("nav--hidden");
-  //   }
-
-  //   lastScrollY = window.scrollY;
-  // });
-
 function Navbar({handleLogout, user}) {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
@@ -58,8 +35,7 @@ function Navbar({handleLogout, user}) {
         </li> 
         </ul>
         <div className='hamburger' onClick={handleClick}> 
-          {click ? (<FaTimes size={20} style={{color:'#fff'}}/>) : (<FaBars size={20} style={{color:'#fff'}} />)}
-          
+          {click ? (<FaTimes size={20} style={{color:'#fff'}}/>) : (<FaBars size={20} style={{color:'#fff'}} />)} 
         </div>
     </header>
   )

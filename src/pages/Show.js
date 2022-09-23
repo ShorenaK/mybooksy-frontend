@@ -1,5 +1,3 @@
-// Delete and update page 
-
 import Reviews from "../pages/Reviews";
 
 import Bookinfo from "../components/Bookinfo"

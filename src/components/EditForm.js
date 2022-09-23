@@ -2,17 +2,6 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 const BASE_URL = process.env.REACT_APP_URL || "http://localhost:4000/";
-
-// const getBooks = async (fn) => {
-//     try{
-//         const response = await fetch(BASE_URL + "books");
-//         const allBooks = await response.json();
-//         fn(allBooks)
-//     } catch (error){
-//         console.log(error)
-//     }
-// }
-
 function EditForm(props) {
 
     const navigate = useNavigate()
@@ -96,7 +85,7 @@ function EditForm(props) {
         Date of Publication: <input type="date" required name="publishDate" onChange={handleChange} value={editForm.publishDate} />
                 </label>
                 <br></br>
-                <input className="delete" size={80} style={{color:'rgb(107, 38, 38)', marginLeft: '8rem', marginTop: '3rem', borderRadius: 5 + 'px', size: 30 + 'px'}} type="Submit" value="Submit Changes" />
+                <input className="delete" style={{color:'rgb(107, 38, 38)', width:'500px', height: '500px', marginLeft: '8rem', marginTop: '3rem', borderRadius: 5 + 'px'}} type="Submit" value="Submit Changes" />
             </form>
            </> : null}
         </>

@@ -4,30 +4,6 @@ import {Link} from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import '../styles/Header.css';
 
-// window.onscroll = function() {scrollFunction()};
-// function scrollFunction() {
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     document.querySelector(".header").style.top = "0";
-//   } else {
-//     document.querySelector(".header").style.top = "-50px";
-//   }
-// }
-
-
-  // const nav = document.querySelector(".header");
-  // let lastScrollY = window.scrollY;
-
-  // window.addEventListener("scroll", () => {
-  //   if (lastScrollY < window.scrollY) {
-  //     nav.classList.add("nav--hidden");
-  //   } else {
-  //     nav.classList.remove("nav--hidden");
-  //   }
-
-  //   lastScrollY = window.scrollY;
-  // });
-
-
 function Header() {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
@@ -35,7 +11,6 @@ function Header() {
   return (
     <header className='header'>
         <Link to="/"></Link>
-
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         <li>
             <Link to="/">Home</Link>
@@ -43,16 +18,12 @@ function Header() {
         <li>
             <Link to="/books">Books</Link>
         </li>
-         {/* <li>
-            <Link to={`/books/add/`}><p>Add book</p></Link>
-        </li>  */}
         <li>
             <Link to="/books/add">Add Book</Link>
         </li> 
         </ul>
         <div className='hamburger' onClick={handleClick}> 
           {click ? (<FaTimes size={20} style={{color:'#fff'}}/>) : (<FaBars size={20} style={{color:'#fff'}} />)}
-          
         </div>
     </header>
   )
