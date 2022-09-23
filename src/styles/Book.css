@@ -26,9 +26,9 @@
   }
   
   p{
-    color: rgba(47, 18, 18, 0.282);
+    color: rgb(130, 100, 100);
      font-style:inherit;
-     font-weight: bolder;
+     font-weight: bold;
   }
   h2{
     color: rgba(47, 18, 18, 0.282);
