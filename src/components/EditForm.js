@@ -96,7 +96,7 @@ const BASE_URL =  "https://mybooksy-project.herokuapp.com/";
         Date of Publication: <input type="date" required name="publishDate" onChange={handleChange} value={editForm.publishDate} />
                 </label>
                 <br></br>
-                <input className="delete" style={{color:'rgb(107, 38, 38)', width:'500px', height: '500px', marginLeft: '8rem', marginTop: '3rem', borderRadius: 5 + 'px'}} type="Submit" value="Submit Changes" />
+                <input className="delete" style={{color:'rgb(107, 38, 38)', marginLeft: '8rem', marginTop: '3rem', borderRadius: 5 + 'px'}} type="Submit" value="Submit Changes" />
             </form>
            </> : null}
         </>
