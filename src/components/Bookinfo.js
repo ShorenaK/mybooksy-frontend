@@ -92,27 +92,28 @@ const handleSubmitUnlike = async (e) => {
        <img src={book.image}  alt="book"/>
        <h4>Author: {book.author}</h4>
         <p>Genre: {book.genre}</p>
-        <p>Page: {book.pages}</p>
+        <p>Pages: {book.pages}</p>
         <p>{book.description}</p>
         <p>Publication Date: {dateFormat(book.publishDate, 'mmmm, dS, yyyy')}</p>
-        <a href={book.link} style={{color:'rgb(107, 38, 38)'}}>Links </a>
-        {book.likes.includes(userInfo._id) ? 
+        <a href={book.link} style={{color:'rgb(107, 38, 38)',textDecorationLine:'underline', fontWeight: 'bold'}}>Buy </a>
+        <p>Likes: {likes}</p>
+        {userInfo && book.likes.includes(userInfo._id) ? 
         <form onSubmit={handleSubmitUnlike}>
-          <p>{likes}</p>
-        <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}><BiLike style={{color:'rgb(107, 38, 38)'}}/>   UnLike </button>
+        <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}><BiLike style={{color:'rgb(107, 38, 38)'}}/>   Unlike </button>
         </form>
-        : 
+        : user ?
         <form onSubmit={handleSubmitLike}>
-          <p>{likes}</p>
          <button className="delete" type="submit"size={30} style={{color:'rgb(107, 38, 38)',marginLeft:'1rem', borderRadius: 20 + 'px'}}><BiLike style={{color:'rgb(107, 38, 38)'}}/>     Like </button>
         </form>
-        }
+        : null}
+    {user && user.isAdmin ?
     <div> 
         <Link to={`/books/${bookId}edit/`}><button className="delete" style={{color:'rgb(107, 38, 38)', marginBottom:'0.5rem', marginLeft:'0.5rem',marginRight:'0.5rem',marginTop:'0.5rem'}}>Edit book</button></Link>
         <button className="delete" onClick={removeBook} style={{color:'rgb(107, 38, 38)'}}>
 									Remove Book
 				</button>
     </div>
+    : null }
 </div>
 )
 

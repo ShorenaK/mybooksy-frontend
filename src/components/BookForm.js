@@ -1,5 +1,6 @@
 import "../styles/BookForm.css"
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const BASE_URL = process.env.REACT_APP_URL || "http://localhost:4000/";
 
@@ -13,6 +14,7 @@ const getBooks = async (fn) => {
     }
 }
 function BookForm(props) {
+    const navigate = useNavigate()
 
     const initForm = {
         title: '',
@@ -28,6 +30,7 @@ function BookForm(props) {
     const [bookForm, setBookForm] = useState(initForm);
 
     const handleSubmit = async (e) => {
+        e.preventDefault()
         try {
             const newBook = { ...bookForm }
             const output = JSON.stringify(newBook)
@@ -42,6 +45,7 @@ function BookForm(props) {
             const response = await fetch(URL, options)
             const responseData = await response.json()
             setBookForm(initForm)
+            navigate('/books')
 
         } catch (error) {
             console.log(error)

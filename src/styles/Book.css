@@ -15,7 +15,6 @@
   width: 24px;
   animation: loading infinite 3s linear;
   }
- 
   .book-card {
   border: 1px solid rgba(87, 20, 20, 0.217);
   display: flex;
@@ -69,11 +68,11 @@ h4, p, a{
    margin-top: 0px;
 
 }
-  @media screen and (max-width:1280px) {
+  @media screen and (max-width:1240px) {
+
     .book-list {
      display: block;
-    }
-  
+    } 
   }
   @media screen and (max-width:1024px) {
     .book-list {
@@ -117,5 +116,3 @@ h4, p, a{
     }
   }
 
-
- 
