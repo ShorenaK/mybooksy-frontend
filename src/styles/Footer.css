@@ -1,6 +1,6 @@
-/* rgba(87, 20, 20, 0.217) */
+
 .footer{
-     /* position: fixed;  */
+    
    
     bottom: 0;
     width: 100%;
@@ -9,7 +9,7 @@
     
 }
 .footer-container {
-    /* position: absolute; */
+    
      margin-bottom: 8rem;
     bottom: 0;
     max-width: 1140px;
@@ -19,10 +19,6 @@
     grid-gap: 40px;
     width: 100%;
     padding: 6rem 0;
-    /* position: absolute; */
-    /* bottom: 0;
-    width: 100%;
-    height: 4.5rem;  */
 }
 
 .footer .left {
@@ -32,7 +28,6 @@
     display: flex;
     flex-direction: column;
     padding: 1rem;
-     /* margin-bottom: 8rem; */
 }
 
 .footer .right{
@@ -43,7 +38,7 @@
     flex-direction: column;
     padding: 1rem;
     margin: auto;
-     /* margin-bottom: 19rem; */
+     
 }
 .footer h4{
     font-size: 1.4rem;

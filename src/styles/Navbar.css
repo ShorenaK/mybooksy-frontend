@@ -1,6 +1,5 @@
 .header{
     transition: top 0.3s;
-    /* position: fixed;  */
     background-color: var(--mainColor);
     width: 100%;
     height: var(--nav-height);
@@ -11,7 +10,6 @@
     padding: 1rem;
     z-index: 10;
     --nav-height: 50px;
-    /* padding-top: var(--nav-height)  */
 }
 
 .nav--hidden {
@@ -40,18 +38,8 @@
 .hamburger{
     display: none;
 }
-/* button  */
-/* header .nav-btn {
-   padding: 5px;
-   cursor: pointer;
-   background: transparent;
-   border: none;
-   outline: none;
-   color: var(--mainColorLight);
-   visibility: hidden;   // visible;
-   opacity: 0;  // 1 ;
-} */
-@media screen and (max-width:1024px) {
+
+/* @media screen and (max-width:1024px) { */
    /* .hamburger {
     display: block;
    }
@@ -91,7 +79,7 @@ header {
   padding: none;
   transition: top 0.3s;
 } */
-}
+/* } */
 /* 
 @media screen and (max-width:900px) {
   .hamburger {

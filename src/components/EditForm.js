@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-const BASE_URL = process.env.REACT_APP_URL || "http://localhost:4000/";
+const BASE_URL =  "https://mybooksy-project.herokuapp.com/";
 
 // const getBooks = async (fn) => {
 //     try{
@@ -62,41 +62,41 @@ function EditForm(props) {
         <>
             {editForm ?
             <>
-            <h1>Book Edit Form</h1>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Title: 
-                    <input type="text" required name="title" placeholder="Enter book name" onChange={handleChange} value={editForm.title} />
+           <form className="form" onSubmit={handleSubmit}>
+           <h1>Book Edit Form !</h1>
+            <label>
+            Title: <input type="text" required name="title" placeholder="Enter book name" onChange={handleChange} value={editForm.title} />
+            </label>
+            <br></br>
+             <label>
+             Cover: <input type="text" required name="image" placeholder="http://..." onChange={handleChange} value={editForm.image} />
+            </label>
+            <br></br>
+            <label>
+             Author: <input type="text" required name="author" placeholder="Enter author name" onChange={handleChange} value={editForm.author} />
+            </label>
+            <br></br>
+            <label>
+            Pages: <input type="number" required min={1} name="pages" onChange={handleChange} value={editForm.pages} />
+            </label>
+            <br></br>
+            <label>
+            Genre: <input type="text" required name="genre" placeholder="Enter book genres" onChange={handleChange} value={editForm.genre} />
+            </label>
+            <br></br>
+            <label>
+        Description: <input type="text" required name="description" placeholder="Enter description of book" onChange={handleChange} value={editForm.description} />
                 </label>
+                <br></br>
                 <label>
-                    Book Cover: 
-                    <input type="text" required name="image" placeholder="http://..." onChange={handleChange} value={editForm.image} />
+        Link to Purchase: <input type="text" required name="link" placeholder="http://..." onChange={handleChange} value={editForm.link} />
                 </label>
+                <br></br>
                 <label>
-                    Author: 
-                    <input type="text" required name="author" placeholder="Enter author name" onChange={handleChange} value={editForm.author} />
+        Date of Publication: <input type="date" required name="publishDate" onChange={handleChange} value={editForm.publishDate} />
                 </label>
-                <label>
-                    Number of Pages: 
-                    <input type="number" required min={1} name="pages" onChange={handleChange} value={editForm.pages} />
-                </label>
-                <label>
-                    Genre: 
-                    <input type="text" required name="genre" placeholder="Enter book genres" onChange={handleChange} value={editForm.genre} />
-                </label>
-                <label>
-                    Description of Book: 
-                    <input type="text" required name="description" placeholder="Enter description of book" onChange={handleChange} value={editForm.description} />
-                </label>
-                <label>
-                    Date of Publication: 
-                    <input type="date" required name="publishDate" onChange={handleChange} value={editForm.publishDate} />
-                </label>
-                <label>
-                    Link to Purchase: 
-                    <input type="text" required name="link" placeholder="http://..." onChange={handleChange} value={editForm.link} />
-                </label>
-                <input type="Submit" value="Submit Changes" />
+                <br></br>
+                <input className="delete" size={80} style={{color:'rgb(107, 38, 38)', marginLeft: '8rem', marginTop: '3rem', borderRadius: 5 + 'px', size: 30 + 'px'}} type="Submit" value="Submit Changes" />
             </form>
            </> : null}
         </>
