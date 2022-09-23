@@ -3,16 +3,6 @@ import { useParams, useNavigate } from "react-router-dom";
 
 const BASE_URL =  "https://mybooksy-project.herokuapp.com/";
 
-// const getBooks = async (fn) => {
-//     try{
-//         const response = await fetch(BASE_URL + "books");
-//         const allBooks = await response.json();
-//         fn(allBooks)
-//     } catch (error){
-//         console.log(error)
-//     }
-// }
-
   function EditForm(props) {
 
     const navigate = useNavigate()
