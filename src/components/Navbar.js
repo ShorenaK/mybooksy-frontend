@@ -3,7 +3,7 @@ import '../styles/Navbar.css';
 import {Link} from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
 
-function Navbar({handleLogout, user, isAuthenticated}) {
+function Navbar({handleLogout, user}) {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
 
@@ -37,8 +37,7 @@ function Navbar({handleLogout, user, isAuthenticated}) {
         : null } 
         </ul>
         <div className='hamburger' onClick={handleClick}> 
-          {click ? (<FaTimes size={20} style={{color:'#fff'}}/>) : (<FaBars size={20} style={{color:'#fff'}} />)}
-          
+          {click ? (<FaTimes size={20} style={{color:'#fff'}}/>) : (<FaBars size={20} style={{color:'#fff'}} />)} 
         </div>
     </header>
   )

@@ -4,7 +4,6 @@
      object-fit: cover;
      z-index: -1;
  }
-
  .hero{
      height: 100vh;
      width: 100%;
@@ -18,7 +17,6 @@
      height: 100%;
      top:40vh;
  }
- 
  .hero .btn{
      font-size: 3rem;
      font-weight: 400;

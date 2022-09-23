@@ -29,8 +29,6 @@ function BookForm(props) {
 
     const [bookForm, setBookForm] = useState(initForm);
 
-
-
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
@@ -96,7 +94,7 @@ function BookForm(props) {
         Date of Publication: <input type="date" required name="publishDate" onChange={handleChange} value={bookForm.publishDate} />
                 </label>
                 <br></br>
-                <button className="delete" size={80} style={{color:'rgb(107, 38, 38)', marginLeft: '10rem', marginTop: '3rem', borderRadius: 5 + 'px', size: 30 + 'px'}}  name="Submit" id="button" value="Add Book">Add Book</button>
+                <button className="delete"  style={{color:'rgb(107, 38, 38)', marginLeft: '6rem', marginTop: '3rem', width:'150px', height: '50px'}}  name="Submit" id="button" value="Add Book">Add Book</button>
                 </div>
             </form>
         </>

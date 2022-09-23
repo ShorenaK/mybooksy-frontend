@@ -1,7 +1,5 @@
 
 .footer{
-    
-   
     bottom: 0;
     width: 100%;
     padding: 6rem 0;
@@ -9,7 +7,6 @@
     
 }
 .footer-container {
-    
      margin-bottom: 8rem;
     bottom: 0;
     max-width: 1140px;
@@ -38,7 +35,6 @@
     flex-direction: column;
     padding: 1rem;
     margin: auto;
-     
 }
 .footer h4{
     font-size: 1.4rem;

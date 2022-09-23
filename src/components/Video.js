@@ -11,11 +11,9 @@ export default function Video() {
     </video>
 
     <div className='content'>
-      <h1>
-      <Link to="/books" className='btn'> <img  src="https://i.imgur.com/K6cdwpG.png" alt="logo" /> </Link>
-    </h1>
+    
+      <Link to="/books" className='btn'>  <img style={{width:'300px', height: '300px'}} src="https://i.imgur.com/K6cdwpG.png" alt="logo" /> </Link>
     </div>
     </div>
   )
 }
-{/* <img src="./assets.logo" alt="logo" /> */}

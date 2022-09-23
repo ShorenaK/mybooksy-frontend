@@ -10,7 +10,6 @@ body {
 ul{
   list-style-type: none;
 }
-
 a{
   text-decoration: none;
 }
@@ -18,7 +17,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 h1{
   color: rgb(107, 38, 38);
 }

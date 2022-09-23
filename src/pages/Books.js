@@ -1,5 +1,3 @@
-// This page will fatch the Books data & and maybe create new one I need to ask? 
-
  import { useState, useEffect } from "react";
  import {Link} from 'react-router-dom' 
  import dateFormat from 'dateformat'

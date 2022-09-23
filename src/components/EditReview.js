@@ -56,8 +56,8 @@ function EditReview(props) {
             <form onSubmit={handleSubmit}>
                 <label> 
                     Would you recommend this book:
-                    <input type="radio" required name="recommend" onChange={handleChange} value={editForm.recommend = true} />
-                   Yes
+                    <input style={{ marginLeft: '2rem'}} type="radio" required name="recommend" onChange={handleChange} value={editForm.recommend = true} />
+                    Yes
                  </label> 
                    <label>
                     <input type="radio" required name="recommend" onChange={handleChange} value={editForm.recommend = false} />
@@ -65,7 +65,9 @@ function EditReview(props) {
                     </label>
                     <br></br>
                 <label>
-                Comment:   <input className="input_place" type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={editForm.comment}/>
+                 <h4> Comment: </h4> 
+                <br></br>
+                <textarea style={{width:'250px', height: '250px', resize:'none'}} className="input_place" type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={editForm.comment}></textarea>
                 </label>
                 <input className="delete" style={{ marginLeft: '2rem'}} type="Submit" value="Submit Changes" />
             </form>
