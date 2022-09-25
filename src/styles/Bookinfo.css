@@ -6,7 +6,6 @@
     text-align: center;
     border-radius: 10px;
     margin: 0 auto; 
-    /* border: 10px solid rgba(87, 20, 20, 0.217); */
 }
 
 h1{
@@ -24,25 +23,31 @@ h4, p, a{
 .book-wrapper{
  
   display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: center;
-    border-radius: 10px;
-    margin: 0 auto; 
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  border-radius: 20px;
+  margin: 0 auto; 
   
 }
 .book-img{
-  width: 300px;
+  width: 400px;
   height: auto;
   margin: 0 auto;
+  margin-top: 20px;
 
 }
+.book-reviews{
+  margin-left: 200px;
+}
+
 .book>h1 {
     grid-area: title;
 }
 
 .description{
   width: 400px;
+  margin: 0 auto;
   height: auto;
 }
 .book h2:first-of-type {
@@ -52,10 +57,10 @@ h4, p, a{
 .book h2:last-of-type {
     grid-area: label;
 }
-
-.book-reviews{
-    margin-left: 620px;
+.review-wrapper{
+   margin: 0 auto;
 }
+
 
 @media screen and (max-width:1280px) {
     .book-perbook {

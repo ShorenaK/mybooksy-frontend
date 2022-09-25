@@ -57,7 +57,6 @@ function BookForm(props) {
         <>
             <form className="form" onSubmit={handleSubmit}>
             <h1>Book Form !</h1>
-            <div class="bform">
             <label>
             Title: <input className="title" type="text" required name="title" placeholder="Enter book name" onChange={handleChange} value={bookForm.title} />
             </label>
@@ -90,8 +89,7 @@ function BookForm(props) {
         Date of Publication: <input type="date" required name="publishDate" onChange={handleChange} value={bookForm.publishDate} />
                 </label>
                 <br></br>
-                <button className="delete"  style={{color:'rgb(107, 38, 38)', marginLeft: '6rem', marginTop: '3rem', width:'150px', height: '50px'}}  name="Submit" id="button" value="Add Book">Add Book</button>
-                </div>
+                <button className="delete"  style={{color:'rgb(107, 38, 38)', margin:"0 auto", width:'150px', height: '50px'}}  name="Submit" id="button" value="Add Book">Add Book</button>
             </form>
         </>
     )

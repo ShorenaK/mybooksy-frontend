@@ -64,7 +64,7 @@ function EditReview(props) {
                 <label>
                  <h4> Comment: </h4> 
                 <br></br>
-                <textarea style={{width:'250px', height: '250px', resize:'none'}} className="input_place" type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={editForm.comment}></textarea>
+                <textarea style={{width:'300px', height: '250px', resize:'none'}} className="input_place" type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={editForm.comment}></textarea>
                 </label>
                 <input className="delete" style={{ marginLeft: '2rem'}} type="Submit" value="Submit Changes" />
             </form>

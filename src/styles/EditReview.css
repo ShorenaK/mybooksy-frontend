@@ -8,7 +8,6 @@
        justify-content: flex-start;
        text-align: center;
        border-radius: 10px;
-        /* margin-left: 40rem; */
         margin-top: 2rem;
         margin-bottom: 10rem;
  } 
@@ -25,9 +24,23 @@ form input {
 h1 {
     font-size: 50px;
     font-family: 'Righteous', cursive;
+    margin: 0 auto;
 }
 
  
+form input {
+  margin-bottom: 5rem;
+  padding: 10px 18px;
+  font-size: 1.2 rem;
+  padding: 10px 18px;
+  font-family: 'oitfit, sans-serif';
+  background:  rgba(140, 42, 42, 0.217);
+  border-color: rgb(161, 8, 8);
+  color: rgb(136, 7, 7);
+  height: 50px;
+  font-size:15pt;
+}
+
 @media screen and (max-width:1280px) {
     .form {
      display: block;
