@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
-
+import "../styles/LogIn.css"
 function AuthForm({signal, ...userLogin}) {
     const user = {...userLogin}
     const {login} = user

@@ -8,10 +8,10 @@
        flex-direction: column;
        justify-content: flex-start;
        text-align: center;
-           border-radius: 10px;
+       border-radius: 10px;
         /* margin-left: 40rem; */
-}
-/* 
+ }  
+
 /* .add_review{
     margin-top: 2rem;
        margin-bottom: 10rem;
@@ -45,9 +45,11 @@ form label {
     height: 50px;
     font-size:15pt;
 }
+
 label{
     color:  rgb(107, 38, 38);
 }
+
 input[type='radio'] { 
     transform: scale(1.5); 
 }
@@ -56,11 +58,11 @@ input[type=radio]:checked {
 }  
 
 
-/* .add_review{
+.add_review{
     margin-left: 40rem;
     margin-top: 2rem;
     margin-bottom: 10rem;
-} */
+}
 
  
 

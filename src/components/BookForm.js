@@ -79,7 +79,7 @@ function BookForm(props) {
                 </label>
                 <br></br>
                 <label>        
-        Description: <input type="text" required name="description" placeholder="Enter description of book" onChange={handleChange} value={bookForm.description} />
+        Description: <input style={{width:'500px'}} type="text" required name="description" placeholder="Enter description of book" onChange={handleChange} value={bookForm.description} />
                 </label>
                 <br></br>
                 <label>

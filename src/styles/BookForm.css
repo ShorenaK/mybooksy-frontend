@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
 
 .form{
-    margin-top: 2rem;
+      margin-top: 2rem;
        margin-bottom: 10rem;
        display: flex;
        flex-direction: column;
@@ -10,7 +10,7 @@
        text-align: center;
            border-radius: 10px;
         /* margin-left: 40rem; */
-}
+ } 
 
 
 h1 {
