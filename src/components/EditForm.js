@@ -85,7 +85,7 @@ const BASE_URL =  "https://mybooksy-project.herokuapp.com/";
             </label>
             <br></br>
             <label>
-        Description: <input style={{height:'200px'}} type="text" required name="description" placeholder="Enter description of book" onChange={handleChange} value={editForm.description} />
+        Description: <input rows='4' style={{width:'500px'}} type="text" required name="description" placeholder="Enter description of book" onChange={handleChange} value={editForm.description} />
                 </label>
                 <br></br>
                 <label>
@@ -96,7 +96,7 @@ const BASE_URL =  "https://mybooksy-project.herokuapp.com/";
         Date of Publication: <input  type="date" required name="publishDate" onChange={handleChange} value={editForm.publishDate} />
                 </label>
                 <br></br>
-                <input className="delete" style={{color:'rgb(107, 38, 38)', marginLeft: '8rem', marginTop: '3rem', borderRadius: 5 + 'px'}} type="Submit" value="Submit Changes" />
+                <input className="delete" style={{width: '200px', height: '50px', margin: "0 auto" }}  type="Submit" value="Submit Changes" />
             </form>
            </> : null}
         </>

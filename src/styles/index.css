@@ -19,6 +19,7 @@ code {
 h1{
   color: rgb(107, 38, 38);
 }
+
 .delete {
   border: 1px solid  rgb(107, 38, 38);;
   background-color: transparent;
@@ -36,5 +37,4 @@ h1{
   color: white;
   cursor: pointer;
 }
-
 

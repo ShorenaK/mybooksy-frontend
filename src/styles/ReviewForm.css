@@ -8,6 +8,7 @@
     border-radius: 10px;
      /* margin-left: 40rem; */
  } 
+
 .radio{
     margin-left:  20px;
     transform: scale(2.5);
@@ -49,7 +50,5 @@
     .form {
      display: block;
     }
-    .form lable {
-        display: block;
-      }
+
   }

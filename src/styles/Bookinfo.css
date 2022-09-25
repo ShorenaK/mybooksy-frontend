@@ -5,7 +5,7 @@
     justify-content: flex-start;
     text-align: center;
     border-radius: 10px;
-    margin-left: 30rem;
+    margin: 0 auto; 
     /* border: 10px solid rgba(87, 20, 20, 0.217); */
 }
 
@@ -21,19 +21,30 @@ h4, p, a{
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 }
+.book-wrapper{
+ 
+  display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 auto; 
+  
+}
+.book-img{
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+
+}
 .book>h1 {
     grid-area: title;
 }
 
-.book>img {
-    grid-area: image;
-    width: auto;
-    height: 50vh;
-    margin-left: 5px;
-    margin-right: 5px;
-
+.description{
+  width: 400px;
+  height: auto;
 }
-
 .book h2:first-of-type {
     grid-area: name;
 }
