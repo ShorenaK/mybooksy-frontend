@@ -1,5 +1,4 @@
 #video {
-
      width: 100%;
      height: 100%;
      object-fit: cover;
@@ -14,27 +13,26 @@
  .hero .content {
      text-align: center;
      position: absolute;
-     margin: auto;
+     margin: auto; 
      width: 100%;
      height: 100%;
      top:40vh;
 
  }
  .hero .btn{
-     font-size: 3rem;
-     font-weight: 400;
-     text-transform: uppercase;
-     margin-bottom: 1rem .2rem;
-     color: #D4AF37;
+     font-size: 10rem;  
+       margin-bottom: 5rem; 
+
  }
  
+.hero .content {
+    font-size: 4rem;
+    margin-bottom: 9rem;
+}
+
  @media screen and (max-width:640px) {
-     .content h1{
+     .content {
          font-size: 3rem;
          margin-bottom: 1.6rem;
      }
- }
- .image{
-    max-width: 100%;
-    height: auto;
  }

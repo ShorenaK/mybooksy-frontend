@@ -1,4 +1,13 @@
 
+.book-perbook{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    border-radius: 10px;
+    border: 10px solid rgba(87, 20, 20, 0.217);
+}
+
 h1{
     margin-bottom: 2rem;
     margin-top: 1rem;
@@ -35,3 +44,44 @@ h4, p, a{
 .book-reviews{
     margin-left: 620px;
 }
+
+@media screen and (max-width:1280px) {
+    .book-perbook {
+     display: block;
+    }
+   .book-list{
+        display: block; 
+    }
+  }
+  @media screen and (max-width:1024px) {
+    .book-perbook{
+      display: block;
+    } 
+    .book-card {
+      display: block;
+    }
+  }
+  @media screen and (max-width:900px) {
+    .book-perbook {
+     display: block;
+    }
+
+  }
+  @media screen and (max-width:768px) {
+    .book-perbook {
+     display: block;
+    }
+ 
+  
+  }
+  @media screen and (max-width:600px) {
+    .book-perbook {
+     display: block;
+    }
+ 
+  }
+  @media screen and (max-width:500px) {
+    .book-perbook {
+      display: block;
+    }
+  }

@@ -48,7 +48,7 @@ function EditReview(props) {
     return (
         <>
             {editForm ?
-            <div className="add_review">
+            <div className="form">
             <h1>Edit Review ! </h1>
             <form onSubmit={handleSubmit}>
                 <label> 
