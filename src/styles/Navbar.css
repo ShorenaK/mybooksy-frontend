@@ -126,7 +126,6 @@ header {
   top: 0;
  left: 0;
  background-color: var(--mainColor);
- /* color: white; */
  font-family: 'Exo 2', sans-serif; 
  padding: none;
  transition: top 0.3s;
