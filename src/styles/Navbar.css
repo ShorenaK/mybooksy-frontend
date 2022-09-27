@@ -10,6 +10,7 @@
     padding: 1rem;
     z-index: 10;
     --nav-height: 50px;
+    font-size: 1.5rem;
 }
 .nav--hidden {
   transform: translateY(calc(-1 * var(--nav-height)));
@@ -22,6 +23,7 @@
 
 .nav-menu li {
    padding: 0 1rem;
+
 }
 :root{
   --mainColor: rgba(87, 20, 20, 0.217);
@@ -31,7 +33,7 @@
 }
 .nav-menu a{
   margin: 0 2rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 .hamburger{
@@ -62,9 +64,14 @@
    }
    .nav-menu li{
      padding: 1rem 0;
+     color: #4B371C;
    }
    .nav-menu a {
-     font-size: 2rem;
+     font-size: 4rem;
+     font-weight: 600;
+     color: #4B371C;
+     /* color: #3C280D; */
+     line-height: 100px;   
    }
 
 header {
@@ -73,10 +80,12 @@ header {
    top: 0;
   left: 0;
   background-color: var(--mainColor);
-  color: white;
+  /* color: white; */
   font-family: 'Exo 2', sans-serif; 
+  size: 60px;
   padding: none;
   transition: top 0.3s;
+  color: #3C280D; 
 } 
 }
  
@@ -97,16 +106,19 @@ header {
    transition: 0.3s;
    z-index: -1;
    background: rgba(87, 20, 20, 0.217) ;
-  
+   color: #4B371C;
   }
   .nav-menu.active{
    left:0;
+   color: #4B371C;
   }
   .nav-menu li{
     padding: 1rem 0;
+    color: #4B371C;
   }
   .nav-menu a {
     font-size: 2rem;
+    color: #4B371C;
   }
 
 header {
@@ -115,10 +127,10 @@ header {
   top: 0;
  left: 0;
  background-color: var(--mainColor);
- color: white;
  font-family: 'Exo 2', sans-serif; 
  padding: none;
  transition: top 0.3s;
+ color: #4B371C;
 }
 } 
 
@@ -143,11 +155,14 @@ header {
   }
   .nav-menu.active{
    left:0;
+   color: #4B371C;
   }
   .nav-menu li{
     padding: 1rem 0;
+    color: #4B371C;
   }
   .nav-menu a {
     font-size: 2rem;
+    color: #4B371C;
   }
 }

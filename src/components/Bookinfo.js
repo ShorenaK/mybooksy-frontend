@@ -89,11 +89,13 @@ const handleSubmitUnlike = async (e) => {
    
   <div className="book-perbook" >
       <h1>{book.title}</h1>
-       <img src={book.image}  alt="book"/>
+       <img className="book-img" src={book.image}  alt="book"/>
        <h4>Author: {book.author}</h4>
         <p>Genre: {book.genre}</p>
         <p>Pages: {book.pages}</p>
+        <div className="description"> 
         <p>{book.description}</p>
+        </div>
         <p>Publication Date: {dateFormat(book.publishDate, 'mmmm, dS, yyyy')}</p>
         <a href={book.link} style={{color:'rgb(107, 38, 38)',textDecorationLine:'underline', fontWeight: 'bold'}}>Buy </a>
         <p>Likes: {likes}</p>
@@ -122,7 +124,7 @@ const loading = () => {
  
 }
   return (
-    <div className="book-list">{book? loaded() : loading()}
+    <div className="book-wrapper">{book? loaded() : loading()}
      </div>
   )
 }

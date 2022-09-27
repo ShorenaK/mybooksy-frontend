@@ -53,14 +53,15 @@ function ReviewForm(props) {
                 </label>
                 <br></br>
                 <label>
-                    <h4>Comment:</h4>
+            <h4>Comment:</h4>
                     <br></br>
-                <textarea style={{width:'250px', height: '250px', resize:'none'}}  type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={reviewForm.comment}></textarea>
+                <textarea style={{width:'300px', height: '250px', resize:'none'}}  type="text" required name="comment" placeholder="What are your thoughts on this book?" onChange={handleChange} value={reviewForm.comment}></textarea>
                 </label>
                 <input className="delete" style={{ marginLeft: '2rem'}} type='Submit' value="Add Review" />
             </form>
         </div>
     )
 }
+  
 
 export default ReviewForm;

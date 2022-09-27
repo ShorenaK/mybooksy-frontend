@@ -33,27 +33,7 @@
     color: rgba(47, 18, 18, 0.282);
 
   }
-  .book h2:first-of-type {
-      grid-area: name;
-  } 
-  
-  .book h2:last-of-type {
-      grid-area: label;
-  }
 
-  .delete {
-      border: 1px solid  rgb(107, 38, 38);;
-      background-color: transparent;
-      padding: 8px 24px;
-      border-radius: 4px;
-      transition: transform .5s ease-in-out;
-  }
-  .delete:hover {
-      border: 1px solid rgb(136, 7, 7);
-      background-color: rgba(87, 20, 20, 0.217);
-      color:  rgb(107, 38, 38);;
-      transform: scale(1.1, 1.1);
-  }
   h1{
     margin-bottom: 2rem;
     margin-top: 1rem;
@@ -63,12 +43,8 @@ h4, p, a{
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
-.book-perbook{
-   margin-left: 600px;
-   margin-top: 0px;
 
-}
-  @media screen and (max-width:1240px) {
+  @media screen and (max-width:1280px) {
 
     .book-list {
      display: block;

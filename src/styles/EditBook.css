@@ -2,40 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
 
 .form{
+     
        display: flex;
        flex-direction: column;
        justify-content: flex-start;
        text-align: center;
-       border-radius: 10px; 
-       margin-top: 2rem;
+       border-radius: 10px;
+        margin-top: 2rem;
         margin-bottom: 10rem;
- }  
+ } 
  form label {
     margin-bottom: .5rem;
-    color:  rgb(107, 38, 38);
- 
+
  }
- input[type='radio'] {
-  transform: scale(1.5);
-}
-input[type=radio]:checked {
-  background-color: #ffa;
-}
 form input {
-  margin-bottom: 5rem;
-  margin-top: 20px;
-  font-size: 1.2 rem; 
-  padding: 10px 18px;
-  font-family: 'oitfit, sans-serif';
-  background:  rgba(140, 42, 42, 0.217);
-  border-color: rgb(161, 8, 8);
-  color: rgb(136, 7, 7);
-  height: 30px; 
-  font-size:15pt;
+  margin-bottom: 1rem;
+  padding: 10px 18px; 
 }
 
+
 h1 {
-    font-size: 40px;
+    font-size: 50px;
     font-family: 'Righteous', cursive;
 }
 
@@ -44,13 +31,12 @@ h1 {
     .form {
      display: block;
     }
-
   }
   @media screen and (max-width:1024px) {
     .form {
       display: block;
     } 
-  
+ 
   }
   @media screen and (max-width:900px) {
     .form {
@@ -62,17 +48,18 @@ h1 {
     .form {
      display: block;
     }
-   
+  
+  
   }
   @media screen and (max-width:600px) {
     .form {
      display: block;
     }
-   
+  
   }
   @media screen and (max-width:500px) {
     .form {
      display: block;
     }
-   
+  
   }

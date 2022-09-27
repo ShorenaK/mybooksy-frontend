@@ -10,9 +10,12 @@ export default function Video() {
         <source src={bookVideo} type='video/mp4'/>
     </video>
 
-    <div className='content'>
     
-      <Link to="/books" className='btn'>  <img style={{width:'300px', height: '300px'}} src="https://i.imgur.com/K6cdwpG.png" alt="logo" /> </Link>
+    <div className='content'>
+   <div> 
+      <Link to="/books" className='btn'>  
+        <img style={{width:'300px', height: '300px'}} src="https://i.imgur.com/K6cdwpG.png" alt="logo" /> 
+      </Link>
     </div>
     </div>
   )
