@@ -18,5 +18,6 @@ export default function Video() {
       </Link>
     </div>
     </div>
+    </div>
   )
 }
