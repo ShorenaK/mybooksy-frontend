@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import '../styles/Navbar.css';
 import {Link} from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
@@ -30,9 +30,11 @@ function Navbar({handleLogout, user}) {
           </li>
         </>
         }
+        { user && user.isAdmin ? 
         <li>
             <Link to="/books/add">Add Book</Link>
-        </li> 
+        </li>
+        : null } 
         </ul>
         <div className='hamburger' onClick={handleClick}> 
           {click ? (<FaTimes size={20} style={{color:'#fff'}}/>) : (<FaBars size={20} style={{color:'#fff'}} />)} 

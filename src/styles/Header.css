@@ -70,7 +70,6 @@
    }
 }
 header {
-
    width: 100%; 
    top: 0;
   left: 0;
@@ -80,4 +79,3 @@ header {
   padding: 2em;
   transition: top 0.3s;
 }
-

@@ -9,6 +9,7 @@
 }
 
 h1{
+    text-align: center;
     margin-bottom: 2rem;
     margin-top: 1rem;
     margin-left: 2rem;
@@ -20,6 +21,7 @@ h4, p, a{
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 }
+
 .book-wrapper{
  
   display: flex;
@@ -28,7 +30,9 @@ h4, p, a{
   text-align: center;
   border-radius: 20px;
   margin: 0 auto; 
-  
+ }
+.book>h1 {
+    grid-area: title; 
 }
 .book-img{
   width: 400px;
@@ -41,6 +45,14 @@ h4, p, a{
   margin-left: 200px;
 }
 
+.book>img {
+    grid-area: image;
+    width: auto;
+    height: 50vh; 
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 .book>h1 {
     grid-area: title;
 }
@@ -51,11 +63,20 @@ h4, p, a{
   height: auto;
 }
 .book h2:first-of-type {
-    grid-area: name;
+     grid-area: name; 
 }
 
 .book h2:last-of-type {
-    grid-area: label;
+     grid-area: label; 
+}
+
+.wrapper {
+    grid-template-columns: 120px 120px 120px;
+    grid-template-areas: 
+    "image"
+    "title"
+    "name"
+    "label";
 }
 .review-wrapper{
    margin: 0 auto;
