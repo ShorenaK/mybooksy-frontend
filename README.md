@@ -14,6 +14,9 @@ You can also post your own book and add you affiliate link for extra exposure wi
 ## Go to app
 [CLICK HERE!](https://6336fb495211cf00744988d7--cheery-twilight-75bceb.netlify.app/)
 
+## Backend Repository
+https://github.com/NathCoursey/myBooksy-Backend
+
 ## Technologies Implemented
 React, MongoDB, Express, Node, CSS
 
